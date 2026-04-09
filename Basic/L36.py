@@ -5,8 +5,12 @@ characters such that there are exactly two of each character. An example is show
 $ N x ! N z
 0 - + # b :
 - : + c c x"""
+import random
 
-from random import choice
-alphabet ='abcdefghijklmnopqrstuvwxyz'
-s = ''.join([choice(alphabet) for i in range(1000)])
+alph = 'abcdefghijklmnopqrstuvwxyz'
+chars = random.sample(alph, 18)
+pairs = chars * 2
+random.shuffle(pairs)
+s = [pairs[i:i+6] for i in range(0, 36, 6)]
+
 print(s)
