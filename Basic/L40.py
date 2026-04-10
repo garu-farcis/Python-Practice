@@ -17,3 +17,5 @@ print(Lnew)
 cols = 3
 indices = [row * cols + col for (row, col) in Lnew]
 print(indices)
+pos = [(i // cols, i % cols) for i in range(9)]
+print(pos)
