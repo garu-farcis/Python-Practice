@@ -1,0 +1,1 @@
+"""Write a program to determine how many zeroes 1000! ends with."""

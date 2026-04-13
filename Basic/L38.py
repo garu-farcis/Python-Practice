@@ -4,6 +4,8 @@ one digit in common in the same position as n. Find n.
 01265, 12171, 23257, 34548, 45970, 56236, 67324, 78084, 89872, 99414"""
 from pprint import pprint
 L= [ 10265, 12171, 23257, 34548, 45970, 56236, 67324, 78084, 89872, 99414]
+L1= list(L)
+pprint(L1)
 for num in range(100000):
     candidate = str(num).zfill(5)
 
