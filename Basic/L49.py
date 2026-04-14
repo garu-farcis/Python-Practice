@@ -3,5 +3,9 @@ the two numbers directly above it. Write a program to generate Pascal’s triang
 user to specify the number of rows. Be sure that it is nicely formatted, like below.
 
 
-            1
-        1      1                      """
+          1
+      1      1
+    1     2     1
+ 1      3 3         1
+1      4 6 4             1
+1   5 10 10 5           1 """
