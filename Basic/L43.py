@@ -4,8 +4,6 @@ possibilities to fill in the magic square.
 5 _ _
 _ 6 2
 3 8 _"""
-
-# Known numbers in the grid
 used = {5, 6, 2, 3, 8}
 for a in range(1, 11):
     if a in used:
@@ -20,7 +18,6 @@ for a in range(1, 11):
                 if d in used or d == a or d == b or d == c:
                     continue
 
-                # Build grid
                 grid = [
                     [5, a, b],
                     [c, 6, 2],
