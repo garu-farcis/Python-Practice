@@ -78,3 +78,8 @@ a=3
 M=[1,2,3]
 print(func1(a))
 print(func2(M))
+
+my_dict1={'alice':85, 'bob':92, 'charlie':78}
+my_L=[(k,v+5) for k,v in my_dict1.items() if v+5>80]
+print(my_L)
+print(dict(my_L))
