@@ -4,3 +4,21 @@ the dictionary, the program should indicate that the person is not a valid user 
 the username is in the dictionary, but the user does not enter the right password, the program
 should say that the password is invalid. If the password is correct, then the program should
 tell the user that they are now logged in to the system."""
+
+my_d = {
+    'alice': 85,
+    'bob': 92,
+    'charlie': 78,
+    'james': 92,
+    'jack': 54
+}
+
+user = input("Enter username: ")
+pwd = int(input("Enter password: "))
+
+if user not in my_d:
+    print("Invalid username")
+elif my_d[user] != pwd:
+    print("Invalid password")
+else:
+    print("Login successful")
