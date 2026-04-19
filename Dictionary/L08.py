@@ -8,3 +8,14 @@ solve this problem is to create a dictionary whose keys are the indices in the u
 the non-asterisk characters and whose values are those characters. Write a program imple-
 menting this approach (or some other approach) to find the strings that match a user-entered
 string."""
+import re
+
+L = ['aabaabac','cabaabca','aaabbcba','aabacbab','acababba']
+import re
+pattern = input("Enter pattern (use * as wildcard): ")
+pattern = "a**a****"
+regex = pattern.replace("*", ".")
+
+matches = [w for w in L if re.fullmatch(regex, w)]
+
+print(matches)
