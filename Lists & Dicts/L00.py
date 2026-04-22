@@ -28,6 +28,17 @@ for item in L:
 print(unique_list)
 
 nested = [1, [2, [3, 4], 5], 6, [7, 8, [9, 10]]]
+
+def flat_lst(d,p_k=''):
+    result=[]
+    for i in d:
+        new_k=f"{p_k}{i}" if p_k else i
+        if isinstance(i,list):
+            result.append(flat_lst(i,new_k))
+        else:
+            result.append(i)
+    return result
+print(flat_lst(nested))
 flat = flatten(nested)
     # [n for m in nested for n in m]
 print(flat)
