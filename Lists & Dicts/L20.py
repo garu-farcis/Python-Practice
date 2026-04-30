@@ -133,3 +133,113 @@ for num in nums:
         second = num
 
 print(second)
+
+
+"""Flatten Nested List
+
+Flatten a nested list (1 level deep).
+
+# Input: [[1,2],[3,4],[5]]
+# Output: [1,2,3,4,5]"""
+lst=[[1,2],[3,4],[5]]
+res=[j for m in lst for j in m]
+print(res)
+
+"""Group Words by Length
+
+Group words into a dictionary by their length.
+
+# Input: ["hi", "hello", "hey", "a"]
+# Output: {2:['hi'], 5:['hello'], 3:['hey'], 1:['a']}"""
+
+h=["hi", "hello", "hey", "a"]
+print(h)
+list1=[len(i) for i in h]
+print(list1)
+print(dict(zip(list1,h)))
+d = defaultdict(list)
+
+for word in h:
+    d[len(word)].append(word)
+
+print(dict(d))
+
+
+"""Find Missing Numbers
+
+Given a list from 1 to n with missing values, return missing ones.
+
+# Input: [1,2,4,6], n=6
+# Output: [3,5]"""
+
+L=[1,2,4,6]
+n =6
+res=[i for i in range(1,n) if i not in L]
+print(res)
+
+
+"""Map + Transform
+
+Use a map (or equivalent) to square all even numbers only.
+
+# Input: [1,2,3,4,5]
+# Output: [4,16]"""
+
+from numpy import *
+L=[1,2,3,4,5]
+L1=[i for i in L if i %2==0]
+print(L1)
+new_L=list(map(lambda x:x**2,L1))
+print(new_L)
+
+"""Common Elements in Multiple Lists
+
+Find common elements across multiple lists.
+
+# Input: [[1,2,3], [2,3,4], [2,5,3]]
+# Output: [2,3]
+14. Character Frequency in String
+
+Return frequency of each character, ignoring spaces.
+
+# Input: "hello world"
+# Output: {'h':1,'e':1,'l':3,'o':2,'w':1,'r':1,'d':1}
+15. Rotate List
+
+Rotate a list to the right by k steps.
+
+# Input: [1,2,3,4,5], k=2
+# Output: [4,5,1,2,3]"""
+
+L= [[1,2,3], [2,3,4], [2,5,3]]
+all_ele=[]
+com_ele=[]
+for each in L:
+    for i in each:
+        if i not in all_ele:
+            all_ele.append(i)
+        else:
+            com_ele.append(i)
+print(com_ele)
+
+
+word="hello world"
+word_list=[i for i in word]
+print(word_list)
+d=defaultdict(int)
+for ch in word_list:
+    d[ch]+=1
+print(dict(d))
+
+L=[1,2,3,4,5]
+k=2
+k=k%len(L)
+L=L[-k:]+L[:-k]
+print(L)
+
+
+
+
+
+
+
