@@ -33,3 +33,63 @@ Using Bubble Sort by Passing the List as an Argument to the Function Call
 11. bubble_sort(items_to_sort)
 12. if __name__ == "__main__":
 13. main()"""
+import itertools
+from itertools import combinations,permutations
+names = ["Alan","Steven"]
+def first_letter(x):
+    return x[0]
+for letter, names in itertools.groupby(names,first_letter):
+    print(letter, list(names)) # names is a generator
+
+from itertools import groupby,product
+
+nums = [1, 3, 5, 2, 4, 6, 7]
+
+# group by even/odd
+for key, group in groupby(nums, key=lambda x: x % 2 == 0):
+    print(key, list(group))
+
+grouped=[(k,list(g)) for k,g in groupby(nums,key=lambda x:x%2==0)]
+print(grouped)
+
+nums = [1, 2, 3, 4]
+
+for combo in combinations(nums, 3):
+    print(combo)
+features = ["age", "salary", "experience"]
+
+for combo in combinations(features, 2):
+    print(combo)
+print(list(list(permutations([1,2,3], 2))))
+
+from itertools import combinations_with_replacement
+
+print(list(combinations_with_replacement([1,2,3], 2)))
+
+a = [1, 2]
+b = [10, 20]
+
+for x, y in product(a, b):
+    print(x + y,x,y)
+
+a='aababcabcdabcde'
+for key,group in groupby(a,key=lambda x:x[0]):
+    print(key,list(group))
+from collections import Counter
+
+rrs= Counter(a)
+print(rrs)
+list_a=[i for i in a]
+print(list_a)
+freq={}
+# max1=0
+for each in list_a:
+    freq[each]=freq.get(each,0)+1
+max1=max(freq,key=freq.get)
+print(freq,max1)
+
+print(rrs.most_common(3))
+print(rrs.most_common()[::-1])
+
+
+
