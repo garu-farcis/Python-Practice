@@ -70,7 +70,28 @@ print(matrix)
 print(np.lexsort(matrix,axis=0))
 # numpy.searchsorted(a, v, side='left', sorter=None)
 print(np.searchsorted(L1,L,side='right'))
+print(np.partition(L,7))
+# np.where (if condition, result, else this result)
+print(np.where(my_arr%2==0,my_arr,my_arr*1000))
+# np.extract(condition to extract, the array from where you extract)
+print(np.extract(my_arr%2!=0,my_arr))
+
+import numpy as np
+arr = np.arange(12).reshape((3, 4))
+condition = np.mod(arr, 3)==0
+print(condition)
+print(np.extract(condition, arr))
+
+print(np.nonzero(np.ravel(arr7))[0])
+print(np.flatnonzero(arr6))
+x=arr6
+print(x.ravel()[np.flatnonzero(x)])
+print(np.argwhere(my_arr),np.argwhere(arr8))
+x = np.arange(6).reshape(2,3)
+print(x)
+print('        ',np.argwhere(x>1))
 
 
-""""""
+
+"""How to convert a 1D array into a 2D array (how to add a new axis to an array)"""
 
