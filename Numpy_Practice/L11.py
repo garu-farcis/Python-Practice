@@ -22,13 +22,7 @@ print(np.where(arr>50,0,arr))
 """11. Universal Functions (ufuncs)
 Given angles = np.array([0, np.pi/2, np.pi, 3*np.pi/2]), compute sin, cos, and exp of these values.
 Also demonstrate np.add, np.maximum, and np.divide on two arrays.
-12. Sorting & Searching
-Create a 2D array (5x4) of random numbers.
-
-Sort each row
-Sort each column
-Find the indices that would sort the flattened array (argsort)
-Find positions where values > mean of the array"""
+y"""
 
 angles = np.array([0, np.pi/2, np.pi, 3*np.pi/2])
 print(np.sin(angles),np.cos(angles),np.exp(angles))
