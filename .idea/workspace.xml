@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numpy_Practice/L13.py" beforeDir="false" afterPath="$PROJECT_DIR$/Numpy_Practice/L13.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numpy_Practice/L15.py" beforeDir="false" afterPath="$PROJECT_DIR$/Numpy_Practice/L15.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,61 +47,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.L00 (1).executor": "Run",
-    "Python.L00.executor": "Run",
-    "Python.L01.executor": "Run",
-    "Python.L02.executor": "Run",
-    "Python.L03.executor": "Run",
-    "Python.L04.executor": "Run",
-    "Python.L05.executor": "Run",
-    "Python.L06.executor": "Run",
-    "Python.L07.executor": "Run",
-    "Python.L08.executor": "Run",
-    "Python.L09.executor": "Run",
-    "Python.L10.executor": "Run",
-    "Python.L11.executor": "Run",
-    "Python.L12.executor": "Run",
-    "Python.L13.executor": "Run",
-    "Python.L14.executor": "Run",
-    "Python.L15.executor": "Run",
-    "Python.L16.executor": "Run",
-    "Python.L17.executor": "Run",
-    "Python.L18.executor": "Run",
-    "Python.L20.executor": "Run",
-    "Python.L48.executor": "Run",
-    "Python.level_1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.L00 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.L00.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L03.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L04.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L05.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L06.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L07.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L08.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L09.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L11.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L17.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L18.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L20.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L48.executor&quot;: &quot;Run&quot;,
+    &quot;Python.level_1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.L12">
-    <configuration name="L08" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python-Refresher" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numpy_Practice" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L08.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+}</component>
+  <component name="RunManager" selected="Python.L13">
     <configuration name="L09" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
@@ -188,13 +168,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="L13" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-Refresher" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numpy_Practice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L13.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.L13" />
         <item itemvalue="Python.L12" />
         <item itemvalue="Python.L11" />
         <item itemvalue="Python.L10" />
         <item itemvalue="Python.L09" />
-        <item itemvalue="Python.L08" />
       </list>
     </recent_temporary>
   </component>
