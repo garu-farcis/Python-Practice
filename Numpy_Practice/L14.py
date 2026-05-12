@@ -144,3 +144,49 @@ print("\nPositions where values > mean:")
 print(positions)
 positionss = np.nonzero(flat_arr)[0]
 print(positionss)
+
+
+"""3. Linear Algebra Basics
+Create two 3x3 matrices A and B.
+
+Compute matrix multiplication (@ or np.dot)
+Compute inverse of A (if invertible)
+Compute determinant of A
+Solve the system Ax = b where b is a vector of ones"""
+A=np.random.default_rng().integers(0,100,size=(3,3))
+print(A)
+B=np.random.default_rng().integers(0,100,size=(3,3))
+print(B)
+print(A@B)
+print(A.__invert__())
+print(np.linalg.inv(A))
+print(np.linalg.det(A))
+b=np.ones((3,3))
+res=np.linalg.solve(A,b)
+print(res)
+
+"""14. Random Number Generation & Statistics
+Set seed to 42. Generate:
+
+1000 samples from standard normal distribution
+A 10x10 array from uniform distribution [0, 1)
+Compute mean, std, and correlation matrix of a 100x5 random normal dataset
+
+15. Real-world Mini Project: Image-like Processing
+Create a 100x100 grayscale "image" (array) with a bright square in the center.
+
+Add Gaussian noise
+Clip values between 0 and 255
+Compute row-wise and column-wise means
+Apply a simple threshold to create a binary mask"""
+
+rng = np.random.default_rng(42)
+myarr=rng.standard_normal(1000)
+uni_matrx=rng.random((10,10))
+data = rng.standard_normal((100, 5))
+mean_values = data.mean(axis=0)
+print("Mean:\n", mean_values)
+std_values = data.std(axis=0)
+print("Std Dev:\n", std_values)
+corr_matrix = np.corrcoef(data, rowvar=False)
+print("Correlation Matrix:\n", corr_matrix)
