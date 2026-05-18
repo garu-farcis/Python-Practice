@@ -69,3 +69,7 @@ result = np.concatenate([
 
 print(result)
 # print(result[:,:,1])
+# z = np.arange(81).reshape(3, 3, 3, 3)
+# z[indices]
+# indices = (1, 1, 1, slice(0, 2))  # same as [1, 1, 1, 0:2]
+# indices = (1, Ellipsis, 1)  # same as [1, ..., 1]
