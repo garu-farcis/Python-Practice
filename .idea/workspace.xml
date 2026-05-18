@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher" />
+    <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher">
+      <change beforePath="$PROJECT_DIR$/Numpy_Practice/L17.py" beforeDir="false" afterPath="$PROJECT_DIR$/Numpy_Practice/L17.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

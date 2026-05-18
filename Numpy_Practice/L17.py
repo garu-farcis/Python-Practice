@@ -68,3 +68,4 @@ result = np.concatenate([
 ])
 
 print(result)
+# print(result[:,:,1])
