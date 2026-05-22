@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Numpy_Practice/L19.py" beforeDir="false" afterPath="$PROJECT_DIR$/Numpy_Practice/L19.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pandas/L00.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pandas/L00.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pandas/ages" beforeDir="false" afterPath="$PROJECT_DIR$/Pandas/ages" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
