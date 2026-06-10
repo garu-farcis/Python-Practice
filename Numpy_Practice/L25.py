@@ -41,3 +41,32 @@ def rolling_stats(data: np.ndarray, window: int = 60) -> np.ndarray:
 
     # Combine into final (M, 2) result
     return np.column_stack((means, stds))
+
+
+
+
+
+# 1D array
+arr = np.array([1, 2, 3, 4])
+print(arr.shape)        # (4,)
+
+# Make it a column vector (2D)
+col = arr[:, np.newaxis]
+print(col.shape)        # (4, 1)
+print(col)
+# [[1]
+#  [2]
+#  [3]
+#  [4]]
+
+# Make it a row vector
+row = arr[np.newaxis, :]
+print(row.shape)        # (1, 4)
+print(row)
+
+a = np.array([1, 2, 3])      # shape (3,)
+b = np.array([10, 20])       # shape (2,)
+
+# We want outer sum: every element of a with every element of b
+result = a[:, np.newaxis] + b[np.newaxis, :]   # shapes (3,1) + (1,2) → (3,2)
+print(result)
