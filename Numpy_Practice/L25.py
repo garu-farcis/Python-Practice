@@ -70,3 +70,24 @@ b = np.array([10, 20])       # shape (2,)
 # We want outer sum: every element of a with every element of b
 result = a[:, np.newaxis] + b[np.newaxis, :]   # shapes (3,1) + (1,2) → (3,2)
 print(result)
+
+
+import numpy as np
+
+a = np.arange(10).reshape(2, 5)
+print(a)
+# [[0 1 2 3 4]
+#  [5 6 7 8 9]]
+
+# Select rows [0,1] and columns [2,4]
+ix = np.ix_([0, 1], [2, 4])
+print(ix)
+# (array([[0], [1]]), array([[2, 4]]))
+
+result = a[ix]
+print(result)
+# [[2 4]
+#  [7 9]]
+c=np.log([-1, 1, 2])
+print(c)
+print(np.eye(5,5))
