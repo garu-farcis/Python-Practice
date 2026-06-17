@@ -45,40 +45,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.L00 (1).executor": "Run",
-    "Python.L00.executor": "Run",
-    "Python.L01.executor": "Run",
-    "Python.L02.executor": "Run",
-    "Python.L03.executor": "Run",
-    "Python.L04.executor": "Run",
-    "Python.L05.executor": "Run",
-    "Python.L06.executor": "Run",
-    "Python.L07.executor": "Run",
-    "Python.L08.executor": "Run",
-    "Python.L09.executor": "Run",
-    "Python.L10.executor": "Run",
-    "Python.L11.executor": "Run",
-    "Python.L12.executor": "Run",
-    "Python.L13.executor": "Run",
-    "Python.L14.executor": "Run",
-    "Python.L15.executor": "Run",
-    "Python.L16.executor": "Run",
-    "Python.L17.executor": "Run",
-    "Python.L18.executor": "Run",
-    "Python.L19.executor": "Run",
-    "Python.L20.executor": "Run",
-    "Python.L48.executor": "Run",
-    "Python.level_1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.L00 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.L00.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L03.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L04.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L05.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L06.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L07.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L08.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L09.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L11.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L17.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L18.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L19.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L20.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L48.executor&quot;: &quot;Run&quot;,
+    &quot;Python.level_1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.L19">
     <configuration name="L00 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
