@@ -80,3 +80,4 @@ data = np.random.randn(100000).astype(np.float64)
 result = rolling_stats(data, window=60)
 
 print(result.shape)
+print("hello")
