@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: zope.hookable
+Version: 8.2
+Summary: Zope hookable
+Author-email: Zope Foundation and contributors <zope-dev@zope.dev>
+Maintainer-email: Plone Foundation and contributors <zope-dev@zope.dev>
+License-Expression: ZPL-2.1
+Project-URL: Documentation, https://zopehookable.readthedocs.io
+Project-URL: Issues, https://github.com/zopefoundation/zope.hookable/issues
+Project-URL: Source, https://github.com/zopefoundation/zope.hookable
+Project-URL: Changelog, https://github.com/zopefoundation/zope.hookable/blob/master/CHANGES.rst
+Keywords: zope,function,hook,replacement,loose,coupled
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Zope :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Provides-Extra: docs
+Requires-Dist: Sphinx; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: test
+Requires-Dist: zope.testing; extra == "test"
+Requires-Dist: zope.testrunner>=6.4; extra == "test"
+Provides-Extra: testing
+Requires-Dist: coverage; extra == "testing"
+Requires-Dist: zope.testing; extra == "testing"
+Requires-Dist: zope.testrunner>=6.4; extra == "testing"
+Dynamic: license-file
+
+===============
+ zope.hookable
+===============
+
+.. image:: https://img.shields.io/pypi/v/zope.hookable.svg
+        :target: https://pypi.python.org/pypi/zope.hookable/
+        :alt: Latest release
+
+.. image:: https://img.shields.io/pypi/pyversions/zope.hookable.svg
+        :target: https://pypi.org/project/zope.hookable/
+        :alt: Supported Python versions
+
+.. image:: https://github.com/zopefoundation/zope.hookable/actions/workflows/tests.yml/badge.svg
+        :target: https://github.com/zopefoundation/zope.hookable/actions/workflows/tests.yml
+
+.. image:: https://readthedocs.org/projects/zopehookable/badge/?version=latest
+        :target: https://zopehookable.readthedocs.io/en/latest/
+        :alt: Documentation Status
+
+.. image:: https://coveralls.io/repos/github/zopefoundation/zope.hookable/badge.svg?branch=master
+        :target: https://coveralls.io/github/zopefoundation/zope.hookable?branch=master
+
+
+This package supports the efficient creation of "hookable" objects, which
+are callable objects that are meant to be optionally replaced.
+
+The idea is that you create a function that does some default thing and make it
+hookable. Later, someone can modify what it does by calling its sethook method
+and changing its implementation.  All users of the function, including those
+that imported it, will see the change.
+
+Documentation is hosted at https://zopehookable.readthedocs.io

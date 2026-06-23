@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: binary-tree
+Version: 0.0.1
+Summary: Binary_tree is a simple package to create sort and search data with binary trees.
+Home-page: https://github.com/Okirshen/binary_tree
+Author: Ofri Kirshen
+Author-email: okirshen@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+<div style="text-align:center"><span> <h1>Binary_tree</h1></span></div>
+
+---
+
+Binary_tree is a simple package to create sort and search data with binary trees.
+
+##install
+
+---
+
+```
+pip install --upgrade binary_tree
+```
+
+## usage
+
+---
+
+-   To create a tree use the tree object
+-   Get a sorted array using the tree traverse function
+-   Search an item (True/False) via the tree search function
+
+####example
+
+```python
+import binary_tree as bt
+tree1 = bt.tree([1, 6, 3, 9])
+print(tree1.traverse())
+
+# returns [1, 3, 6, 9]
+print(tree1.search(6))
+
+#returns True
+```
+
+#####credits
+**Creator**: Ofri Kirshen
+
+
