@@ -82,3 +82,8 @@ def rolling_rank(data, window=300):
     # Vectorized rank
     ranks = np.argsort(np.argsort(windows, axis=1), axis=1)[:, -1] / (window - 1)
     return ranks
+
+def multi_condition_update(x, cond_a, val_a, cond_b, val_b):
+    np.add.at(x, cond_a, val_a)
+    np.multiply.at(x, cond_b, val_b)
+    np.clip(x, -10, 10, out=x)   # in-place
