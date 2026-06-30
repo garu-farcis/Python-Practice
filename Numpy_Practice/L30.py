@@ -65,3 +65,20 @@
 15. **Chunked FFT-based Cross-Correlation for Template Matching**
     Scenario: Detect patterns in extremely long time-series signals.
     Problem: Implement efficient cross-correlation using FFT on overlapping chunks with proper windowing and normalization. Return lag of best match per chunk."""
+
+import numpy as np
+def forward_fill_events(dense_ts, event_ts, event_features):
+    idx = np.searchsorted(event_ts, dense_ts, side='right') - 1
+    valid = idx >= 0
+    result = np.full((len(dense_ts), event_features.shape[1]), np.nan, dtype=float)
+    result[valid] = event_features[idx[valid]]
+    return result
+from numpy.lib.stride_tricks import as_strided
+
+def rolling_rank(data, window=300):
+    shape = (len(data) - window + 1, window)
+    strides = (data.strides[0], data.strides[0])
+    windows = as_strided(data, shape=shape, strides=strides)
+    # Vectorized rank
+    ranks = np.argsort(np.argsort(windows, axis=1), axis=1)[:, -1] / (window - 1)
+    return ranks
