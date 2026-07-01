@@ -105,3 +105,10 @@ def dtw_distance_matrix(X, Y):  # (N, L) and (M, L)
 
 def batched_outer(A, B):  # (batch, D1), (batch, D2)
     return A[:, :, None] * B[:, None, :]   # shape (batch, D1, D2)
+
+
+def adaptive_bins(stream, n_bins=10, reservoir_size=10000):
+    reservoir = np.array(stream[:reservoir_size])
+    # In production: use reservoir sampling to update
+    quantiles = np.quantile(reservoir, np.linspace(0, 1, n_bins+1))
+    return quantiles
