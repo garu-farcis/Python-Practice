@@ -87,3 +87,21 @@ def multi_condition_update(x, cond_a, val_a, cond_b, val_b):
     np.add.at(x, cond_a, val_a)
     np.multiply.at(x, cond_b, val_b)
     np.clip(x, -10, 10, out=x)   # in-place
+
+def coo_to_dense(edges, values, n_users, n_items):
+    mat = np.zeros((n_users, n_items), dtype=np.float32)
+    mat[edges[:, 0], edges[:, 1]] = values
+    return mat
+
+# Cosine similarity (memory efficient)
+def row_cosine_sim(mat):
+    norms = np.linalg.norm(mat, axis=1, keepdims=True)
+    return (mat @ mat.T) / (norms @ norms.T + 1e-8)
+
+def dtw_distance_matrix(X, Y):  # (N, L) and (M, L)
+    # For same length simple case; full DTW needs DP table
+    diff = X[:, None] - Y[None, :]
+    return np.sqrt(np.sum(diff**2, axis=-1))
+
+def batched_outer(A, B):  # (batch, D1), (batch, D2)
+    return A[:, :, None] * B[:, None, :]   # shape (batch, D1, D2)
