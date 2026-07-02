@@ -112,3 +112,14 @@ def adaptive_bins(stream, n_bins=10, reservoir_size=10000):
     # In production: use reservoir sampling to update
     quantiles = np.quantile(reservoir, np.linspace(0, 1, n_bins+1))
     return quantiles
+
+def fft_cross_correlation(signal, template, chunk_size=100000):
+    corr = np.zeros(len(signal) - len(template) + 1)
+    template_fft = np.fft.rfft(template)
+    for i in range(0, len(signal)-len(template), chunk_size):
+        chunk = signal[i:i+len(template)+chunk_size]
+        chunk_fft = np.fft.rfft(chunk)
+        corr_chunk = np.fft.irfft(chunk_fft * template_fft.conj())
+        corr[i:i+len(corr_chunk)-len(template)+1] = corr_chunk[len(template)-1:]
+    return corr
+
