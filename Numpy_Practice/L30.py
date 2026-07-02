@@ -123,3 +123,11 @@ def fft_cross_correlation(signal, template, chunk_size=100000):
         corr[i:i+len(corr_chunk)-len(template)+1] = corr_chunk[len(template)-1:]
     return corr
 
+def randomized_svd(A, k=50, n_iter=2):
+    m, n = A.shape
+    Q = np.random.randn(n, k)
+    for _ in range(n_iter):
+        Q, _ = np.linalg.qr(A @ Q)
+        Q, _ = np.linalg.qr(A.T @ Q)
+    _, S, Vt = np.linalg.svd(Q.T @ A, full_matrices=False)
+    return Q @ Vt[:k]
