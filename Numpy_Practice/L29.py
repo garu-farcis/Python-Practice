@@ -82,3 +82,20 @@ for a, b in zip(arr1.flat, arr2.flat):
     pair_counts[key] = pair_counts.get(key, 0) + 1
 
 print(pair_counts)
+
+# 5. Implement a function that takes a 2D NumPy array and returns a dictionary of dictionaries representing a sparse matrix (only store non-zero elements with (row,col) as tuple keys).
+
+def sparse_matrix(arr):
+    if not isinstance(arr,np.ndarray) or arr.ndim!=2:
+        raise ValueError("Input must be 2D array")
+    sparse = {}
+    for i in range(arr.shape[0]):
+        row_dict = {}
+        for j in range(arr.shape[1]):
+            val = arr[i, j]
+            if val != 0:
+                row_dict[j] = val  # inner dict: col -> value
+        if row_dict:  # only add non-empty rows
+            sparse[i] = row_dict
+
+    return sparse
