@@ -37,9 +37,9 @@
 import numpy as np
 from collections import defaultdict
 
-from Basic.L46 import count
+# from Basic.L46 import count
 
-my_array=np.random.default_rng().integers(0,100,10)
+my_array=np.random.default_rng().integers(0,100,(5,4))
 print(my_array)
 lst=defaultdict(int)
 freq = {val: np.sum(my_array == val) for val in np.unique(my_array)}
@@ -99,3 +99,5 @@ def sparse_matrix(arr):
             sparse[i] = row_dict
 
     return sparse
+
+sparse_matrix(arr2)
