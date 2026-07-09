@@ -101,3 +101,29 @@ def sparse_matrix(arr):
     return sparse
 
 sparse_matrix(arr2)
+
+
+# 6. For a 1D array of length n, create a dictionary where each key is the starting index of a rolling window of size 4, and the value is the subarray (as NumPy array) for that window.
+
+length= int(input("enter your length"))
+ar1=np.arange(length)
+print(ar1)
+def rolling_windows(ar1,winsize=4):
+    if not isinstance(ar1,np.ndarray) or ar1.ndim!=1:
+        raise ValueError("Input must be a 1D NumPy array")
+    if len(ar1)<winsize:
+        raise ValueError(f"Input length of array should be more tha {winsize}")
+    res={}
+    for i in range(len(ar1)-winsize+1):
+        res[i]=ar1[i:i+winsize]
+    return res
+
+win_res=rolling_windows(ar1,winsize=4)
+for indx,sub_arr in win_res.items():
+    print(f"{indx}:{sub_arr}")
+
+# 7. Given a 2D NumPy array, sort the rows based on a custom ordering defined by a dictionary that assigns weights to each possible value. Return the sorted array.
+
+
+twodarr=np.random.default_rng().integers(0,100,(4,3))
+print(twodarr)
