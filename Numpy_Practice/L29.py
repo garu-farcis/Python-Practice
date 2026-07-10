@@ -105,8 +105,8 @@ sparse_matrix(arr2)
 
 # 6. For a 1D array of length n, create a dictionary where each key is the starting index of a rolling window of size 4, and the value is the subarray (as NumPy array) for that window.
 
-length= int(input("enter your length"))
-ar1=np.arange(length)
+# length= int(input("enter your length"))
+ar1=np.arange(4)
 print(ar1)
 def rolling_windows(ar1,winsize=4):
     if not isinstance(ar1,np.ndarray) or ar1.ndim!=1:
@@ -127,3 +127,12 @@ for indx,sub_arr in win_res.items():
 
 twodarr=np.random.default_rng().integers(0,100,(4,3))
 print(twodarr)
+weights = {1: 10, 2: 5, 3: 20, 4: 1}
+weight_map = np.vectorize(lambda x: weights.get(x, 0))
+print(weight_map)
+weight_arr=weight_map(twodarr)
+newarr=np.lexsort(weight_arr.T[::-1])
+print(newarr)
+# newarr=np.argsort(twodarr,axis=1,kind='Q')
+
+# 8. Create a dictionary from a 3D NumPy array where keys are (layer, row) tuples and values are the mean of that row slice.
