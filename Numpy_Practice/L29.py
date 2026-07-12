@@ -136,3 +136,6 @@ print(newarr)
 # newarr=np.argsort(twodarr,axis=1,kind='Q')
 
 # 8. Create a dictionary from a 3D NumPy array where keys are (layer, row) tuples and values are the mean of that row slice.
+
+threed=np.random.default_rng().integers(20,100,(2,4,5))
+print(threed)
