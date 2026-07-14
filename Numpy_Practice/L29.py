@@ -139,3 +139,5 @@ print(newarr)
 
 threed=np.random.default_rng().integers(20,100,(2,4,5))
 print(threed)
+val=[np.mean(threed[i]) for i in range(threed.shape[-1])]
+print(val)
