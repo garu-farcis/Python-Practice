@@ -139,6 +139,8 @@ print(newarr)
 
 threed=np.random.default_rng().integers(20,100,(2,4,5))
 print(threed)
-val=[np.mean(threed[i]) for i in range(threed.shape[:-1])]
-print(val)
+# val=[np.mean(threed[i]) for i in range(threed.shape[:-1])]
+# print(val)
 sorted_indices = np.lexsort(weight_arr[:, ::-1].T)   # or adjust column order as needed
+keys=[(layer,row) for row in threed.shape for layer in row]
+print(keys)
