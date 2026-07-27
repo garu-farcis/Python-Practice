@@ -1,4 +1,7 @@
 """1. Write a function that takes a list of integers and returns a new list with only the even numbers, squared."""
+from numpy.ma.extras import average
+
+
 def squared(numlst):
     print(f"your list is{numlst}")
     evenlst=[i for i in numlst if i%2==0]
@@ -100,6 +103,62 @@ def grouper(mystring):
 myst=["jhgh",' djh',' sfg', 'jghdj',' hgfkfb','s skj',' wooe',' fdkj dfn'," wsfg svs"]
 res=grouper(myst)
 print(f"the result is {res}")
+
+"""7. Implement a recursive function to compute the nth Fibonacci number efficiently using memoization."""
+def fibo(limitaion):
+    # print(f"the limit of your series is {limitaion}")
+    if limitaion<2:
+        return limitaion
+    else:
+        return fibo(limitaion-1)+fibo(limitaion-2)
+lim=11
+val=fibo(lim)
+for i in range(0,lim+1):
+    print(fibo(i), end=" ")
+print(f"the value of fibo at position {lim} is {val}")
+
+"""8. Write a function that removes all duplicates from a list while preserving the original order."""
+
+def removedups(mylst):
+    print(f"my list is {mylst}")
+    unique=[]
+    dups=[]
+    for each in mylst:
+        if each not in unique:
+            unique.append(each)
+        else:
+            dups.append(each)
+    print(f"duplicates are {dups}")
+    # print(f"unique list is {unique}")
+    return unique
+
+lst=[3,4,5,65,6,4,4,4,3,2,2,5,46,6,7,65,44,3]
+res=removedups(lst)
+print(f"unique list with order preserved is {res}")
+
+
+"""9. Create a function that takes a dictionary of student scores and returns the names of students who scored above the average."""
+
+def students(scoresdct):
+    print(f"score list is {scoresdct}")
+    # scores=[v for v in scoresdct.values()]
+    score_avg= sum(scoresdct.values()) / len(scoresdct)
+    print(f"avg is {score_avg}")
+    res_dct=defaultdict(list)
+    for k,v in scoresdct.items():
+        if v>=score_avg:
+            res_dct[k].append(v)
+        else:
+            pass
+    return res_dct.keys()
+
+# score_lst=[10,24,54,44,46,22,28,34,40,44,54,55,32,24,22,42,23]
+mydict={"Alice": 85, "Bob": 70, "Charlie": 95, "Diana": 60}
+res=students(mydict)
+print(f"the names of students who scored above the average {res} ")
+
+
+"""10. Write a function that rotates a list to the right by k positions."""
 
 
 
