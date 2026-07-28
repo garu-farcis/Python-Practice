@@ -159,6 +159,13 @@ print(f"the names of students who scored above the average {res} ")
 
 
 """10. Write a function that rotates a list to the right by k positions."""
+def rotate_right(lst, k):
+    if not lst:
+        return lst
+    k = k % len(lst)
+    return lst[-k:] + lst[:-k]
+
+print(rotate_right([1, 2, 3, 4, 5], 2))  # [4, 5, 1, 2, 3]
 
 
 
