@@ -167,5 +167,27 @@ def rotate_right(lst, k):
 
 print(rotate_right([1, 2, 3, 4, 5], 2))  # [4, 5, 1, 2, 3]
 
+"""11. Implement a simple stack class with push, pop, peek, and is_empty methods."""
 
+class stackimplement:
+    def __init__(self):
+        self._items=[]
+    def push(self,item):
+        self._items.append(item)
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("pop from empty stack")
+        return self._items.pop()
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("peek from empty stack")
+        return self._items[-1]
+    def is_empty(self):
+        return len(self._items)==0
+
+s = stackimplement()
+s.push(10)
+s.push(20)
+print(s.pop())   # 20
+print(s.peek())
 
