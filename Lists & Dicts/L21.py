@@ -191,3 +191,15 @@ s.push(20)
 print(s.pop())   # 20
 print(s.peek())
 
+"""12. Write a function that finds all pairs of numbers in a list that sum to a target value. Return unique pairs."""
+
+target_val=20
+lst=[10,20,5,15,12,8,18,2]
+# mydct={target_val:(i,j) for i in lst for j in lst if (i+j)==target_val}
+# print(mydct)
+pairs=set()
+for i in range(len(lst)):
+    for j in range(i+1,len(lst)):
+        if lst[i]+lst[j]==target_val:
+            pairs.add((lst[i],lst[j]))
+print(f"the pairs are {pairs}")
