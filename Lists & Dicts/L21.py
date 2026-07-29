@@ -203,3 +203,14 @@ for i in range(len(lst)):
         if lst[i]+lst[j]==target_val:
             pairs.add((lst[i],lst[j]))
 print(f"the pairs are {pairs}")
+
+
+"""13. Create a function that validates whether a string is a valid email address using a simple regex (not full RFC)."""
+
+"""14. Write a generator function that yields the first n prime numbers."""
+
+def primes(k):
+    if k==0:
+        return 0
+    else:
+
