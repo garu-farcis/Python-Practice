@@ -44,3 +44,20 @@ oned[even] = -1
 oned[multiple3] = 0
 
 print(oned)
+
+"""Given two arrays of the same length:
+   x = np.array([1, 3, 5, 7, 9])
+   y = np.array([2, 4, 6, 8, 10])
+   Build a 2-D array that interleaves them column-wise:
+   [[1 2]
+    [3 4]
+    [5 6]
+    [7 8]
+    [9 10]]
+   Use only stacking / reshaping – no Python loops."""
+x = np.array([1, 3, 5, 7, 9])
+y = np.array([2, 4, 6, 8, 10])
+a=[]
+z=[(i,j) for i in x for j in y]
+print(z)
+
