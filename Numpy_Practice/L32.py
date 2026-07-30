@@ -60,4 +60,16 @@ y = np.array([2, 4, 6, 8, 10])
 a=[]
 z=[(i,j) for i in x for j in y]
 print(z)
+res = np.column_stack((x,y))
+print(res)
 
+"""Create a 6x6 matrix filled with the numbers 0..35 in row-major order.
+   Extract every other element of every other row using advanced indexing
+   (fancy indexing) so the result is a 3x3 array:
+   [[ 0  2  4]
+    [12 14 16]
+    [24 26 28]]"""
+
+arr= np.random.default_rng().integers(0,35,(6,6))
+print(arr)
+print(arr[:,(0,1,2)])
