@@ -73,3 +73,5 @@ print(res)
 arr= np.random.default_rng().integers(0,35,(6,6))
 print(arr)
 print(arr[:,(0,1,2)])
+result = arr[[0, 2, 4]][:, [0, 2, 4]]
+print(result)
