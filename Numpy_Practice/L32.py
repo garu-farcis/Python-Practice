@@ -75,3 +75,13 @@ print(arr)
 print(arr[:,(0,1,2)])
 result = arr[[0, 2, 4]][:, [0, 2, 4]]
 print(result)
+
+import numpy as np
+
+arr = np.arange(36).reshape(6, 6)
+
+print(arr)
+
+result = arr[[0, 2, 4]][:, [0, 2, 4]]
+
+print(result)
