@@ -108,3 +108,8 @@ print(row_norms)
 
 print("\nColumn norms:")
 print(col_norms)
+
+"""Generate a 1-D array of 1000 standard-normal samples.
+   Using only vectorized operations, compute the proportion of values that
+   lie inside the interval [-1.96, 1.96] (approx. 95 % of a normal distribution).
+   Sample expected value ≈ 0.95"""
