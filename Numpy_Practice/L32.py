@@ -113,3 +113,5 @@ print(col_norms)
    Using only vectorized operations, compute the proportion of values that
    lie inside the interval [-1.96, 1.96] (approx. 95 % of a normal distribution).
    Sample expected value ≈ 0.95"""
+
+dd=np.random.randint(1000)
