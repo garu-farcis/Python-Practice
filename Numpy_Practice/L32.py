@@ -85,3 +85,26 @@ print(arr)
 result = arr[[0, 2, 4]][:, [0, 2, 4]]
 
 print(result)
+
+"""Given a = np.random.randn(4, 5)
+   Compute the Euclidean norm of each row and of each column without using
+   np.linalg.norm.  Return two 1-D arrays (row_norms, col_norms)."""
+
+import numpy as np
+
+a = np.random.randn(4, 5)
+
+# Euclidean norm of each row
+row_norms = np.sqrt(np.sum(a**2, axis=1))
+
+# Euclidean norm of each column
+col_norms = np.sqrt(np.sum(a**2, axis=0))
+
+print("Array:")
+print(a)
+
+print("\nRow norms:")
+print(row_norms)
+
+print("\nColumn norms:")
+print(col_norms)
