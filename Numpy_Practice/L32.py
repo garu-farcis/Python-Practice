@@ -116,6 +116,7 @@ print(col_norms)
 
 dd=np.random.randn(1000)
 proportion = np.mean(np.abs(dd) <= 1.96)
+proportion = np.mean((x >= -1.96) & (x <= 1.96))
 print(f"Proportion inside [-1.96, 1.96]: {proportion:.4f}")
 
 
