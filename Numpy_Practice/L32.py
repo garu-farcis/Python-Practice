@@ -127,7 +127,23 @@ print(f"Proportion inside [-1.96, 1.96]: {proportion:.4f}")
    Verify they are identical."""
 
 matr1=np.random.default_rng().integers(0,100,(3,4))
-matr2=np.random.default_rng().integers(0,100,(3,4))
+matr2=np.random.default_rng().integers(0,100,(4,2))
 prod=matr1@matr2
-sum=np.einsum()
+sum=np.einsum('ij, jk ->', matr1, matr2)
 print(f"product is {prod}")
+
+"""Create a sorted array of 15 unique random integers in [1, 50].
+   Insert the value 25 into the correct sorted position using only
+   np.searchsorted and np.insert (no Python sorting)."""
+
+matr1=np.random.default_rng().integers(0,100,15)
+print(matr1)
+matr1.sort()
+r=np.searchsorted(matr1,25)
+res=np.insert(matr1,r,25)
+# res=np.searchsorted(matr1,side="left")
+print(f"result is {res}")
+
+
+
+
