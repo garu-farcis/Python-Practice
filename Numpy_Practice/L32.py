@@ -145,5 +145,10 @@ res=np.insert(matr1,r,25)
 print(f"result is {res}")
 
 
+"""Given a 2-D array of shape (8, 6) filled with random floats,
+    replace every element that is greater than the 75-th percentile of
+    its own column by NaN.  Use broadcasting and np.percentile"""
 
+arr=np.random.randn(8,6)
+print(arr)
 
