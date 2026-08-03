@@ -155,4 +155,37 @@ perc=np.percentile(arr,75,axis=0)
 arr[arr>perc]=np.nan
 print(arr)
 
+"""Build a 5x5 Hilbert matrix H where H[i,j] = 1 / (i + j + 1)
+    (0-based indices).  Then compute its condition number with
+    np.linalg.cond.  Sample H[0,0] = 1.0, H[4,4] = 0.1"""
+
+n = 5
+i = np.arange(n).reshape(-1, 1)   # Column indices
+j = np.arange(n)                  # Row indices
+
+H = 1 / (i + j + 1)
+
+print("Hilbert Matrix:")
+print(H)
+cond= np.linalg.cond(H)
+print(f"condition {cond}")
+
+"""Given a 1-D array of daily temperatures (length 30),
+    compute a 7-day moving average using only convolution
+    (np.convolve) with a uniform kernel.  The result should have length 24."""
+
+
+d1=np.arange(30)
+kernel = np.ones(7) / 7
+res=np.convolve(d1,kernel,mode="valid")
+print(f"convolved is {res}")
+
+
+"""Create two arrays:
+    a = np.array([1, 2, 3, 2, 4, 1, 5])
+    b = np.array([2, 4, 6, 8])
+    Using set-like NumPy functions, return:
+    - elements that appear in both a and b
+    - elements that appear only in a
+    - elements that appear in either a or b (union)"""
 
