@@ -119,4 +119,14 @@ proportion = np.mean(np.abs(dd) <= 1.96)
 print(f"Proportion inside [-1.96, 1.96]: {proportion:.4f}")
 
 
-""""""
+"""Given two matrices A (3x4) and B (4x2) filled with random integers,
+   compute the matrix product A @ B two different ways:
+   (a) using the @ operator
+   (b) using np.einsum
+   Verify they are identical."""
+
+matr1=np.random.default_rng().integers(0,100,(3,4))
+matr2=np.random.default_rng().integers(0,100,(3,4))
+prod=matr1@matr2
+sum=np.einsum()
+print(f"product is {prod}")
