@@ -114,4 +114,9 @@ print(col_norms)
    lie inside the interval [-1.96, 1.96] (approx. 95 % of a normal distribution).
    Sample expected value ≈ 0.95"""
 
-dd=np.random.randint(1000)
+dd=np.random.randn(1000)
+proportion = np.mean(np.abs(dd) <= 1.96)
+print(f"Proportion inside [-1.96, 1.96]: {proportion:.4f}")
+
+
+""""""
