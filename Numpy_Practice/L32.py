@@ -151,4 +151,8 @@ print(f"result is {res}")
 
 arr=np.random.randn(8,6)
 print(arr)
+perc=np.percentile(arr,75,axis=0)
+arr[arr>perc]=np.nan
+print(arr)
+
 
