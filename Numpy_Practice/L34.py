@@ -104,20 +104,14 @@ fairarr=np.random.randint(0,2,1000)
 
 # Add zeros at both ends
 padded = np.concatenate(([0], fairarr, [0]))
-
 # Find changes
 changes = np.diff(padded)
-
 # Heads start where change = +1
 starts = np.where(changes == 1)[0]
-
 # Heads end where change = -1
 ends = np.where(changes == -1)[0]
-
 # Lengths of head runs
 lengths = ends - starts
-
 # Longest run
 longest = lengths.max()
-
 print(longest)
