@@ -189,3 +189,33 @@ print(f"convolved is {res}")
     - elements that appear only in a
     - elements that appear in either a or b (union)"""
 
+a = np.array([1, 2, 3, 2, 4, 1, 5])
+b = np.array([2, 4, 6, 8])
+either= np.union1d(a,b)
+uni=np.intersect1d(a,b)
+onlya= np.setdiff1d(a,b)
+print(f"elements that appear in both a and b {uni}, elements that appear only in a {onlya},elements that appear in either a or b (union) {either} ")
+
+"""Given a 3-D array of shape (2, 3, 4) filled with consecutive integers
+    starting from 0, reshape / transpose it so that the axes become
+    (4, 2, 3) while preserving the original data order
+    (i.e., the linear memory order stays the same)."""
+
+d3=np.random.default_rng().integers(0,100,(2,3,4))
+print(f"original is  {d3}")
+redone=d3.reshape(4,2,3)
+print(f"redone is {redone}")
+
+"""Create a 10x10 matrix of random integers in [0, 9].
+    For every row, find the index of the first occurrence of the maximum
+    value in that row.  Return a 1-D array of those 10 indices
+    (use np.argmax with the correct axis, no Python loops).
+"""
+
+a=np.random.default_rng().integers(0,10,(10,10))
+print(a)
+res=np.argmax(a,axis=1)
+print(f"the result is {res}")
+
+
+
