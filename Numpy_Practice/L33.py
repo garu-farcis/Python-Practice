@@ -156,3 +156,46 @@ print(t[globmax])
     Extract the upper-triangular part (including diagonal)
     into a 1-D array in row-major order using boolean
     masking with np.tri / np.triu. Sample length: 10"""
+
+a = np.arange(16).reshape(4, 4)
+trian=~np.tri(4,dtype=bool,k=1)
+print(a[trian])
+
+"""Simulate a simple random walk of 500 steps:
+    start at 0, each step is +1 or -1 with equal probability.
+    Use np.cumsum and np.random.choice. Return the final
+    position and the maximum absolute excursion from zero
+    that occurred during the walk."""
+
+myarr=np.random.default_rng().choice([-1, 1], size=500)
+print(myarr)
+walk=np.cumsum(myarr)
+final_pos=walk[-1]
+# The excursion is the distance from zero.
+excursion=np.abs(walk)
+# max of excursion distance
+max_dist=np.max(excursion)
+print(max_dist)
+
+"""Given three arrays of the same length:
+    x, y, z = np.random.randn(3, 100)
+    Compute the covariance matrix of the three variables
+    using only np.cov (or the definition with centering
+    and matrix multiplication). Verify it is symmetric
+    and positive semi-definite (all eigenvalues ≥ 0)."""
+
+# x, y, z = np.random.randn(3, 100)
+# varinc=np.cov(x,y,z)
+# symm=np.allclose(varinc,varinc.T)
+# print(symm)
+# eigenvals=np.linalg.eigvals(varinc)
+# print(np.all(eigenvals>=0))
+
+
+"""Create a 8x8 checkerboard pattern of 0s and 1s
+    starting with 0 in the top-left corner, using only
+    broadcasting and arithmetic (no loops, no np.tile
+    of a small pattern). Sample a[0,0] == 0, a[0,1] == 1."""
+
+checkboard= np.tile([0,1],(8,8))
+print(checkboard)
