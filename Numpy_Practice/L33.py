@@ -97,3 +97,26 @@ perc5=np.percentile(a,95)
 mask=(a>=perc2) & (a<=perc4)
 print(mask)
 
+"""Create a sparse-like representation of a 6x6 identity
+    matrix using only the three arrays of a COO format:
+    row indices, column indices and data values.
+    Reconstruct the dense matrix with these three arrays
+    and verify it equals np.eye(6)."""
+
+rowind=np.arange(6)
+colind=np.arange(6)
+vals=np.ones(6,dtype=int)
+dense=np.zeros((6,6),dtype=int)
+dense[rowind,colind]=vals
+print(dense)
+
+# Verify it equals the identity matrix
+print(np.array_equal(dense, np.eye(6, dtype=int)))
+
+
+"""Given two 1-D arrays of different lengths:
+    a = np.array([3, 1, 4, 1, 5, 9])
+    b = np.array([2, 7, 1, 8])
+    Pad the shorter array with zeros on the right, then
+    compute their element-wise product and the sum of that
+    product (dot product of the padded vectors)."""
