@@ -141,3 +141,18 @@ print(cusum.shape,randarr.shape)
 print(cusum)
 randarr[:,]=cusum
 print(randarr)
+
+"""Create a 1-D array t = np.linspace(0, 2*np.pi, 200).
+    Using only vectorized NumPy, evaluate the function
+    f(t) = sin(t) * cos(2*t) + exp(-t/3).
+    Then find the index of the global maximum of f
+    and the corresponding t value"""
+t = np.linspace(0, 2*np.pi, 200)
+funct=np.sin(t) * np.cos(2*t) + np.exp(-t/3)
+globmax=np.argmax(funct)
+print(t[globmax])
+
+"""Given a = np.arange(16).reshape(4, 4)
+    Extract the upper-triangular part (including diagonal)
+    into a 1-D array in row-major order using boolean
+    masking with np.tri / np.triu. Sample length: 10"""
