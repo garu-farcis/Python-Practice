@@ -71,3 +71,29 @@ avg = (u + d + l + r) / 4
 mask = (c > u) & (c > d) & (c > l) & (c > r)
 
 result[1:-1, 1:-1] = np.where(mask, avg, c)
+
+"""Build a Vandermonde matrix of order 5 for the points
+    x = np.array([1., 2., 3., 4., 5.]) using only broadcasting
+    and power operations (do not call np.vander).
+    Sample first row: [1. 1. 1. 1. 1.]"""
+
+x = np.array([1., 2., 3., 4., 5.])
+powers=np.arange(5)
+vand=x[:,None]**powers
+print(vand)
+
+"""Given a = np.random.randn(1000)
+    Compute the 5 %, 25 %, 50 %, 75 % and 95 % quantiles
+    in a single call to np.percentile. Then create a boolean
+    mask that is True only for values lying between the
+    25 % and 75 % quantiles (IQR)."""
+
+a = np.random.randn(1000)
+perc1=np.percentile(a,5)
+perc2=np.percentile(a,25)
+perc3=np.percentile(a,50)
+perc4=np.percentile(a,75)
+perc5=np.percentile(a,95)
+mask=(a>=perc2) & (a<=perc4)
+print(mask)
+
