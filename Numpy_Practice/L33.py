@@ -120,3 +120,24 @@ print(np.array_equal(dense, np.eye(6, dtype=int)))
     Pad the shorter array with zeros on the right, then
     compute their element-wise product and the sum of that
     product (dot product of the padded vectors)."""
+
+a = np.array([3, 1, 4, 1, 5, 9])
+b = np.array([2, 7, 1, 8])
+print(a.shape,b.shape)
+padded=np.pad(b,(0,2),mode="constant")
+print(padded)
+elewise=a*padded
+sumelewise= sum(elewise)
+print(f"their element-wise product {elewise} and the sum of that product {sumelewise}")
+
+"""Generate a 4x5 matrix of random integers in [0, 9].
+    For each column compute the cumulative sum from top
+    to bottom, then replace the original matrix by these
+    cumulative sums (in-place if possible). Sample shape
+    remains (4, 5)."""
+randarr=np.random.default_rng().integers(0,9,(4,5))
+cusum=np.cumsum(randarr,axis=0)
+print(cusum.shape,randarr.shape)
+print(cusum)
+randarr[:,]=cusum
+print(randarr)
