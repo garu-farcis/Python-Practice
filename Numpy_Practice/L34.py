@@ -115,3 +115,66 @@ lengths = ends - starts
 # Longest run
 longest = lengths.max()
 print(longest)
+
+
+"""Given x = np.linspace(-2, 2, 9)
+    Evaluate the polynomial p(t) = 2*t**3 - 3*t**2 + t - 5
+    at every point of x using only np.polyval
+    (or pure broadcasting/power). Return the resulting
+    1-D array of 9 values."""
+x = np.linspace(-2, 2, 9)
+print(f"array is {x}")
+p=2*x**3 - 3*x**2 + x - 5
+result = np.polyval([2, -3, 1, -5], x)
+print(f"resulting 1d array is {result}")
+
+"""Create two boolean arrays of shape (8, 8) that form
+    complementary checkerboards (one starts with True,
+    the other with False). Compute their element-wise
+    XOR and verify the result is an array of all True."""
+
+
+myarr=np.tile([[True, False],[False, True]],(4, 4))
+myarr1= ~myarr
+print(f"original array is {myarr}")
+xor_arr=np.bitwise_xor(myarr,myarr1,dtype=bool)
+print(f"xor array is {xor_arr}")
+print(f"checking if array is all true ",np.allclose(True,xor_arr))
+
+"""Given a = np.random.randint(0, 10, size=(5, 6))
+    For each row find the second-largest unique value.
+    If a row has fewer than two distinct values, return -1
+    for that row. Use only sorting / unique operations
+    (no Python loops over rows)."""
+
+a = np.random.randint(0, 10, size=(5, 6))
+result = []
+
+for row in a:
+    u = np.unique(row)
+
+    print(u)
+
+    if len(u) < 2:
+        result.append(-1)
+    else:
+        result.append(u[-2])
+
+print(result)
+
+"""Generate a 1-D array of 50 random floats in [0, 1).
+    Normalize it so that its values sum to 1
+    (i.e., turn it into a discrete probability distribution)
+    using only arithmetic and np.sum. Verify the sum is 1.0."""
+
+# float_arr=np.random.choice([0,1],50)
+float_arr=np.random.random(size=50)
+print(float_arr)
+normal_arr=float_arr/np.sum(float_arr)
+print(normal_arr)
+print(np.sum(normal_arr))
+
+
+
+
+
