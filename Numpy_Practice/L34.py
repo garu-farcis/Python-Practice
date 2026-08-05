@@ -3,7 +3,7 @@
     boolean masking and np.isin (or a vectorized square-root
     check). Return them sorted in ascending order.
     Sample possible values: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81"""
-
+import math
 
 import numpy as np
 arr=np.random.default_rng().integers(0,99,(6,8))
@@ -74,11 +74,11 @@ print(tri_matrix)
     'is_hot' that is True wherever temp > 22."""
 
 temperatures = np.array([22.1, 23.5, 19.8, 25.0, 21.3, 24.7, 18.9])
-dtype=[
+dtypes=[
     ("temp","f8"),
     ("is_hot","bool")
 ]
-struct=np.empty(temperatures.shape,dtype=dtype)
+struct=np.empty(temperatures.shape,dtype=dtypes)
 struct["temp"]=temperatures
 struct["is_hot"]=struct["temp"]>22
 print(struct)
@@ -174,7 +174,31 @@ normal_arr=float_arr/np.sum(float_arr)
 print(normal_arr)
 print(np.sum(normal_arr))
 
+"""Create a 7x7 matrix whose (i, j) entry is
+    gcd(i+1, j+1) (1-based). Use np.fromfunction
+    together with math.gcd or a vectorized gcd
+    implementation. Sample a[0,0] == 1, a[5,2] == 3."""
 
 
+arr=np.fromfunction(lambda i,j:np.gcd(np.astype(i,int) +1,np.astype(j,int)+1),(7,7))
+print(f"my arr is {arr}")
+
+
+"""Given a time series of length 64:
+    ts = np.sin(np.linspace(0, 4*np.pi, 64)) + 0.1*np.random.randn(64)
+    Compute its discrete Fourier transform with np.fft.fft,
+    then the corresponding frequencies with np.fft.fftfreq.
+    Return the frequency (in cycles per sample) that has
+    the largest magnitude (excluding the DC component)."""
+
+ts = np.sin(np.linspace(0, 4 * np.pi, 64)) + 0.1 * np.random.randn(64)
+dff=np.fft.fft(ts)
+print(f"discrete Fourier transform is {dff}")
+n=ts.size
+dff_freq=np.fft.fftfreq(n)
+print(f"corresponding frequencies are {dff_freq}")
+magnitude = np.abs(dff)
+max_index=np.argmax(magnitude[1:])+1
+print(f"frequency (in cycles per sample) that has the largest magnitude (excluding the DC component is {dff_freq[max_index]}")
 
 
