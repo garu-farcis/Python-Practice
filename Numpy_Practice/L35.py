@@ -32,3 +32,17 @@ print(f"mask is {mask}",mask.shape)
     (150, 5) using only NumPy (no sklearn). Each row must
     contain a single 1 and the rest 0s."""
 
+
+labels =np.random.randint(0,4,150)
+one_hot = np.eye(5, dtype=int)[labels]
+print(one_hot)
+print(one_hot.shape)
+
+"""Daily temperature readings (length 90) contain a few NaNs.
+    Replace every NaN by the mean of the two nearest valid
+    neighbours (or the single neighbour at the edges).
+    Do not use pandas. Result must contain no NaNs."""
+
+a1=np.random.rand(30)
+a1[3]=np.nan
+a1[10]=np.nan

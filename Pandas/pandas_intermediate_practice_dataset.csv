@@ -1,0 +1,26 @@
+order_id,customer,region,product,category,quantity,unit_price,order_date,sales_channel,status
+101,Aisha Khan,North,Laptop,Electronics,3,1200,2026-01-05,Online,Delivered
+102,Ben Carter,South,Desk Chair,Furniture,5,250,2026-01-08,Store,Delivered
+103,Carlos Diaz,East,Monitor,Electronics,2,400,2026-01-12,Online,Shipped
+104,Diana Lee,West,Keyboard,Accessories,8,75,2026-01-15,Online,Delivered
+105,Ethan Brown,North,Desk,Furniture,1,650,2026-01-19,Store,Cancelled
+106,Fatima Ali,South,Mouse,Accessories,10,40,2026-01-22,Online,Delivered
+107,George Smith,East,Laptop,Electronics,2,1200,2026-01-28,Store,Delivered
+108,Hannah Wilson,West,Monitor,Electronics,4,400,2026-02-02,Online,Returned
+109,Ivan Petrov,North,Desk Chair,Furniture,6,250,2026-02-07,Store,Delivered
+110,Julia Martin,South,Keyboard,Accessories,12,75,2026-02-11,Online,Delivered
+111,Kevin Brown,East,Mouse,Accessories,7,40,2026-02-14,Store,Shipped
+112,Laura Garcia,West,Laptop,Electronics,1,1200,2026-02-18,Online,Delivered
+113,Michael Chen,North,Monitor,Electronics,3,400,2026-02-21,Store,Delivered
+114,Nora Jones,South,Desk,Furniture,2,650,2026-02-25,Online,Cancelled
+115,Oliver Davis,East,Desk Chair,Furniture,4,250,2026-03-01,Store,Delivered
+116,Priya Shah,West,Mouse,Accessories,15,40,2026-03-04,Online,Delivered
+117,Quinn Taylor,North,Keyboard,Accessories,9,75,2026-03-08,Online,Shipped
+118,Rosa Martinez,South,Laptop,Electronics,2,1200,2026-03-12,Store,Delivered
+119,Sam Wilson,East,Monitor,Electronics,5,400,2026-03-15,Online,Delivered
+120,Tina Anderson,West,Desk,Furniture,1,650,2026-03-19,Store,Returned
+121,Uma Patel,North,Mouse,Accessories,11,40,2026-03-22,Online,Delivered
+122,Victor Lopez,South,Keyboard,Accessories,6,75,2026-03-25,Store,Delivered
+123,Wendy Kim,East,Laptop,Electronics,3,1200,2026-03-29,Online,Cancelled
+124,Yusuf Ahmed,West,Monitor,Electronics,2,400,2026-04-02,Store,Shipped
+125,Zoe Clark,North,Desk Chair,Furniture,7,250,2026-04-06,Online,Delivered
