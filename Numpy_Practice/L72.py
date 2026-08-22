@@ -6,8 +6,18 @@ whole length). Add this sine wave to the original series and then recover an
 """
 
 import numpy as np
-file_path="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/timeseries.npy"
-data=np.load(file_path)
+
+file_path = "/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/timeseries.npy"
+data = np.load(file_path)
 print(data.shape)
-second_arr=np.full_like(data,(np.sinc(3)),dtype=float)
-print(second_arr)
+x = np.linspace(0, 2 * np.pi * 3, len(data))
+second_arr = np.sin(x)
+modified = data + second_arr
+X = np.column_stack([np.sin(x), np.cos(x)])
+coefficients, _, _, _ = np.linalg.lstsq(X, modified - data.mean(), rcond=None)
+A, B = coefficients
+fitted_sine = A * np.sin(x) + B * np.cos(x)
+recovered = modified - fitted_sine
+print("Original:", data)
+print("Modified:", modified)
+print("Recovered:", recovered)
