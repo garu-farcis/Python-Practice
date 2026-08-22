@@ -6,7 +6,6 @@ file_path="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/stu
 data=np.load(file_path)
 print(data.shape)
 sorted_indices = np.argsort(data[:, 1])[::-1]
-
 soreted_col=data[sorted_indices]
 print(soreted_col)
 top_ten=soreted_col[:10]
