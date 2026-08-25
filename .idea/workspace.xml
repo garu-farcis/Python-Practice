@@ -70,6 +70,7 @@
     "Python.L18.executor": "Run",
     "Python.L19.executor": "Run",
     "Python.L20.executor": "Run",
+    "Python.L34.executor": "Run",
     "Python.L48.executor": "Run",
     "Python.L61.executor": "Run",
     "Python.L62.executor": "Run",
@@ -92,8 +93,8 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.L73">
-    <configuration name="L69" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.L34">
+    <configuration name="L34" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,11 +103,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numpy_Practice" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lists &amp; Dicts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L69.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lists &amp; Dicts/L34.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.L34" />
         <item itemvalue="Python.L73" />
         <item itemvalue="Python.L72" />
         <item itemvalue="Python.L71" />
         <item itemvalue="Python.L70" />
-        <item itemvalue="Python.L69" />
       </list>
     </recent_temporary>
   </component>
