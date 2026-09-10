@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lists &amp; Dicts/L25.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lists &amp; Dicts/L25.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +74,7 @@
     "Python.L25.executor": "Run",
     "Python.L26.executor": "Run",
     "Python.L27.executor": "Run",
+    "Python.L28.executor": "Run",
     "Python.L34.executor": "Run",
     "Python.L48.executor": "Run",
     "Python.L61.executor": "Run",
@@ -98,7 +98,7 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.L27">
+  <component name="RunManager" selected="Python.L28">
     <configuration name="L24" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
@@ -187,7 +187,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_size_chunking" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="L28" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,7 +200,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lists &amp; Dicts/data_size_chunking.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lists &amp; Dicts/L28.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.L28" />
         <item itemvalue="Python.L27" />
         <item itemvalue="Python.L26" />
         <item itemvalue="Python.L25" />
         <item itemvalue="Python.L24" />
-        <item itemvalue="Python.data_size_chunking" />
       </list>
     </recent_temporary>
   </component>
