@@ -110,15 +110,18 @@ print(words)
 # sorted list containing the median of every pair of corresponding elements after merging the two lists into one sorted sequence (handle odd/even lengths properly).
 # Sample Input: [1, 3, 5] and [2, 4, 6]
 # Sample Output: [1.5, 2.5, 3.5, 4.5, 5.5]
-a=[1, 3, 5]
-b= [2, 4, 6]
-my_a=sorted(a)
-my_b=sorted(b)
-x=my_a+my_b
-my_list=[]
-for i in range(len(x)-1):
-        my_list.append([x[i]+x[i+1]]/2)
-print(my_list)
+a = [1, 3, 5]
+b = [2, 4, 6]
+
+merged = sorted(a + b)
+
+result = []
+
+for i in range(len(merged) - 1):
+    median = (merged[i] + merged[i + 1]) / 2
+    result.append(median)
+
+print(result)
 #
 # Given a list of integers and a target sum, return all unique pairs of indices (i, j)
 # such that i < j and the sum of the elements at those indices equals the target.
@@ -128,3 +131,12 @@ print(my_list)
 
 nums = [2, 7, 11, 15, 7]
 target = 9
+
+result = []
+
+for i in range(len(nums)):
+    for j in range(i + 1, len(nums)):
+        if nums[i] + nums[j] == target:
+            result.append((i, j))
+
+print(result)
