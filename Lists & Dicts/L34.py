@@ -4,6 +4,7 @@ Sample Input: ["apple", "banana", "apricot", "blueberry", "avocado", "cherry"]
 Sample Output: {"a": ["apple", "apricot", "avocado"], "b": ["banana", "blueberry"], "c": ["cherry"]}"""
 
 from collections import defaultdict
+from statistics import median
 
 fruits=["apple", "banana", "apricot", "blueberry", "avocado", "cherry"]
 res=defaultdict(list)
@@ -91,4 +92,39 @@ for k,v in prices.items():
                 rs[k].append(v * y)
 total=sum((list(rs.values())),[])
 print(sum(total))
+#
+# Given a list of strings, group them into anagrams and return a list of groups,
+# where each group is sorted alphabetically, and the groups themselves are sorted by the first word of each group.
+# Sample Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+# Sample Output: [["ate", "eat", "tea"], ["bat"], ["nat", "tan"]]
 
+word=["eat", "tea", "tan", "ate", "nat", "bat"]
+words=defaultdict(list)
+for w in word:
+    key=''.join(sorted(w))
+    words[key].append(w)
+print(words)
+
+#
+# Implement a function that takes two sorted lists and returns a new
+# sorted list containing the median of every pair of corresponding elements after merging the two lists into one sorted sequence (handle odd/even lengths properly).
+# Sample Input: [1, 3, 5] and [2, 4, 6]
+# Sample Output: [1.5, 2.5, 3.5, 4.5, 5.5]
+a=[1, 3, 5]
+b= [2, 4, 6]
+my_a=sorted(a)
+my_b=sorted(b)
+x=my_a+my_b
+my_list=[]
+for i in range(len(x)-1):
+        my_list.append([x[i]+x[i+1]]/2)
+print(my_list)
+#
+# Given a list of integers and a target sum, return all unique pairs of indices (i, j)
+# such that i < j and the sum of the elements at those indices equals the target.
+# Indices must be returned in ascending order of i, then j.
+# Sample Input: nums = [2, 7, 11, 15, 7], target = 9
+# Sample Output: [(0, 1), (0, 4)]
+
+nums = [2, 7, 11, 15, 7]
+target = 9
