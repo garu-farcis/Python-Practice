@@ -10,3 +10,5 @@ df['revenue']=df['quantity'] * df['unit_price']
 df['revenue_rank_in_region']=df.groupby('region')['revenue'].transform(lambda x:x.rank(method='min',ascending=False))
 print(df)
 top_2 = df[df['revenue_rank_in_region'] <= 2]
+pd.set_option('display.max_columns', None)
+print(top_2)
