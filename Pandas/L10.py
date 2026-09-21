@@ -7,8 +7,18 @@ import pandas as pd
 pd.set_option('display.max_columns', None)
 
 df=pd.read_csv(file_path)
-df['revenue']=df['quantity']*df['price']
-df['cust_four']=df[df['quanity']>=4]
-cust_4=df.groupby('customer_id')['cust_four'].nunique()
-# cust_filt=df.groupby('customer_id')
-print(cust_4)
+df['revenue']=df['quantity'] * df['unit_price']
+df = df.sort_values(["customer_id", "order_date"])
+
+result = df[
+    df.groupby("customer_id")["customer_id"].transform("size") >= 4
+].copy()
+
+result["rolling_avg_3"] = (
+    result.groupby("customer_id")["revenue"]
+    .rolling(3)
+    .mean()
+    .reset_index(level=0, drop=True)
+)
+
+print(f'my results are {result}')
