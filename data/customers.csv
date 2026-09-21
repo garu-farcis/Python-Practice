@@ -1,0 +1,11 @@
+customer_id,customer_name,email,signup_date,loyalty_tier,age_group
+C001,Alice Johnson,alice.j@email.com,2023-03-15,Gold,25-34
+C002,Bob Smith,bob.smith@email.com,2023-06-22,Silver,35-44
+C003,Carol Lee,carol.lee@email.com,2023-01-10,Gold,25-34
+C004,David Kim,david.kim@email.com,2023-09-05,Bronze,45-54
+C005,Eva Martinez,eva.m@email.com,2023-04-18,Silver,25-34
+C006,Frank Brown,frank.b@email.com,2023-11-30,Bronze,55+
+C007,Grace Wilson,grace.w@email.com,2023-07-12,Gold,35-44
+C008,Henry Taylor,henry.t@email.com,2023-02-28,Silver,25-34
+C009,Ivy Chen,ivy.chen@email.com,2024-01-05,Bronze,18-24
+C010,Jack Davis,jack.d@email.com,2023-12-01,Silver,35-44
