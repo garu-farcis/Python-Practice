@@ -9,10 +9,11 @@ file_path="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sal
 import pandas as pd
 df=pd.read_csv(file_path)
 df['revenue']=df['quantity'] * df['unit_price']
-region_stus=df[df.groupby(['region','status'])].agg(
+region_stus=df.groupby(['region','status']).agg(
     count_order=('quantity','count'),
     total_revenue=('revenue','sum'),
     avg_discount=('discount','mean')
 )
 print(region_stus)
-# stats=region_stus[region_stus['status'].isin(['Completed','Cancelled'])].reset_index(drop=True)
+stats=region_stus.unstack('status')
+print(stats)
