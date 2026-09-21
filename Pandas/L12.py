@@ -11,7 +11,6 @@ df1=pd.read_csv(file_path1)
 merged_df=df.merge(df1,on='customer_id')
 print(merged_df)
 merged_df['revenue']=merged_df['quantity'] * merged_df['unit_price']
-merged_df['total_revenue']=merged_df['revenue'].sum()
 cust_stats=(merged_df.groupby('loyalty_tier').agg(
     avg_revenue=('revenue','mean'),
     total_rev=('revenue','sum'),
