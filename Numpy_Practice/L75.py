@@ -12,3 +12,4 @@ unit_variance=np.var(data,axis=0)
 # data−mean/standard deviation
 standard_ver=data-data_mean/data_std
 print(standard_ver)
+
