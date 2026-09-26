@@ -21,8 +21,7 @@ rolling_std = np.apply_along_axis(
     axis=0,
     arr=data
 )
-new_arr=np.empty((60,8,2))
-new_arr = np.empty((60, 8, 2))
+new_arr = np.full((60, 8, 2), np.nan)
 new_arr[:, :, 0] = rolling_mean
 new_arr[:, :, 1] = rolling_std
 
