@@ -58,7 +58,10 @@ print(res)
 
 
 new_df['days_since_signup']=pd.to_datetime(df['order_date']).dt.day-pd.to_datetime(df1['signup_date']).dt.day
-print(df1)
+new_df=new_df.fillna(0)
+print(new_df)
+mask_within_90=df['days_since_signup']<90
+mask_after_90=df['days_since_signup']>90
 #
 # 5. Using groupby + transform, create a column that shows each order’s revenue as a percentage of the customer’s total lifetime revenue.
 # Then filter to show only orders that represent more than 30% of that customer’s total revenue.
