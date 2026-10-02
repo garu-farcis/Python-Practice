@@ -7,7 +7,7 @@ nums = [1, -2, 3, 4, -5]
 k = 3
 nums[-1]=6
 sub_array=[]
-for num in range(len(nums)+1):
+for num in range(len(nums) - k + 1):
     sub_array.append((nums[num:num+k]))
 print(sub_array)
 sum_array={i:sum(sub_array[i]) for i in range(len(sub_array))}
