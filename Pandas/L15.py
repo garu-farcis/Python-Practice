@@ -44,14 +44,21 @@ print(rev_by_reg[mask].sort_values(['region', 'rank_by_reg']))
 # (Use order_date and customer_id).
 
 df['purchase_month']=pd.to_datetime(df['order_date']).dt.month
-df=df.groupby(['customer_id','purchase_month']).agg(
-    pur_quant=('quantity','count')
+df['first_purchase_month'] = (
+    df.groupby('customer_id')['purchase_month']
+      .transform('min')
 )
-mask=df['pur_quant']>=1
-# res=df[mask].groupby(['purchase_month']).any()
+res = df.groupby(
+    ['first_purchase_month', 'purchase_month']
+)['customer_id'].nunique()
+
 print(res)
 # 4. Add a column `days_since_signup` by merging with customers and calculating the difference between order_date and signup_date.
 # Then compute the average revenue for orders placed within the first 90 days vs after 90 days of signup.
+
+
+new_df['days_since_signup']=pd.to_datetime(df['order_date']).dt.day-pd.to_datetime(df1['signup_date']).dt.day
+print(df1)
 #
 # 5. Using groupby + transform, create a column that shows each order’s revenue as a percentage of the customer’s total lifetime revenue.
 # Then filter to show only orders that represent more than 30% of that customer’s total revenue.
