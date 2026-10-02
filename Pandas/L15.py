@@ -58,7 +58,7 @@ print(res)
 
 
 new_df['days_since_signup']=(pd.to_datetime(df['order_date'])-pd.to_datetime(df1['signup_date'])).dt.days
-new_df=new_df.fillna(0)
+new_df=new_df.dropna()
 print(new_df)
 mask_within_90=new_df['days_since_signup']<90
 mask_after_90=new_df['days_since_signup']>90
