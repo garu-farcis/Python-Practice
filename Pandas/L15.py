@@ -57,17 +57,13 @@ print(res)
 # Then compute the average revenue for orders placed within the first 90 days vs after 90 days of signup.
 
 
-new_df['days_since_signup']=pd.to_datetime(df['order_date']).dt.day-pd.to_datetime(df1['signup_date']).dt.day
+new_df['days_since_signup']=(pd.to_datetime(df['order_date'])-pd.to_datetime(df1['signup_date'])).dt.days
 new_df=new_df.fillna(0)
 print(new_df)
 mask_within_90=new_df['days_since_signup']<90
 mask_after_90=new_df['days_since_signup']>90
-avg_rev_within=new_df[mask_within_90].groupby('order_id').agg(
-    avg_revenue=('revenue','mean')
-)
-avg_rev_after=new_df[mask_after_90].groupby('order_id').agg(
-    avg_revenue=('revenue','mean')
-)
+avg_rev_within = new_df.loc[new_df['days_since_signup'] < 90,'revenue'].mean()
+avg_rev_after = new_df.loc[new_df['days_since_signup'] > 90,'revenue'].mean()
 print(avg_rev_within,avg_rev_after)
 #
 # 5. Using groupby + transform, create a column that shows each order’s revenue as a percentage of the customer’s total lifetime revenue.
