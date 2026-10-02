@@ -28,7 +28,18 @@ print(cust_metrics.sort_values('avg_rev',ascending=False))
 #
 # 2. Using only Completed orders, find the top 3 products by total revenue in each region.
 # Return a DataFrame with columns: region, product, total_revenue, rank_in_region.
-#
+
+mask=df['status']=='Completed'
+my_df=new_df[mask]
+rev_by_reg=my_df.groupby(['region','product']).agg(
+    total_rev=('revenue','sum')
+)
+rev_by_reg['rank_by_reg']=rev_by_reg.groupby('region').rank(method='first',ascending=False)
+mask=rev_by_reg['rank_by_reg']<=3
+print(rev_by_reg[mask].sort_values(['region', 'rank_by_reg']))
+
+
+
 # 3. Create a monthly cohort-style summary: for every customer’s first purchase month, show how many of those customers made at least one purchase in the following months.
 # (Use order_date and customer_id).
 #
