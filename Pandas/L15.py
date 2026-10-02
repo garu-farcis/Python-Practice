@@ -10,7 +10,20 @@ import pandas as pd
 
 df=pd.read_csv(file_path)
 print(df.shape)
+df1=pd.read_csv(cust_path)
+print(df1.shape)
+new_df=pd.merge(df,df1,'left','customer_id',sort=False)
 
+new_df['revenue']=new_df['quantity']*new_df['unit_price']
+print(new_df)
+cust_metrics=new_df.groupby('loyalty_tier').agg(
+    avg_rev=('revenue','mean'),
+    total_rev=('revenue','sum')
+)
+cust_metrics['revenue_pct'] = (
+    cust_metrics['total_rev'] / cust_metrics['total_rev'].sum()
+) * 100
+print(cust_metrics.sort_values('avg_rev',ascending=False))
 
 #
 # 2. Using only Completed orders, find the top 3 products by total revenue in each region.
