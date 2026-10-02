@@ -32,3 +32,12 @@ for count in freq.values():
     if count > 0:
         used.add(count)
 print(deletions)
+
+#
+# . Given an integer array nums sorted in non-decreasing order,
+# return an array of the squares of each number sorted in non-decreasing order.
+# You must solve it in O(n) time and O(1) extra space (excluding the output array).
+# Sample Input: nums = [-7, -3, 2, 3, 11]
+# Sample Output: [4, 9, 9, 49, 121]
+
+nums = [-7, -3, 2, 3, 11]
