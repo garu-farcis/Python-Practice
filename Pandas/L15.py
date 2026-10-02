@@ -42,7 +42,14 @@ print(rev_by_reg[mask].sort_values(['region', 'rank_by_reg']))
 
 # 3. Create a monthly cohort-style summary: for every customer’s first purchase month, show how many of those customers made at least one purchase in the following months.
 # (Use order_date and customer_id).
-#
+
+df['purchase_month']=pd.to_datetime(df['order_date']).dt.month
+df=df.groupby(['customer_id','purchase_month']).agg(
+    pur_quant=('quantity','count')
+)
+mask=df['pur_quant']>=1
+# res=df[mask].groupby(['purchase_month']).any()
+print(res)
 # 4. Add a column `days_since_signup` by merging with customers and calculating the difference between order_date and signup_date.
 # Then compute the average revenue for orders placed within the first 90 days vs after 90 days of signup.
 #
