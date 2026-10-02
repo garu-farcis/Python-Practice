@@ -19,10 +19,16 @@ print(max_el)
 # Sample Input: s = "aabbcc"
 # Sample Output: 3   (delete one a, one b, one c → frequencies become 1,1,1 which are not unique; better delete all of one letter)
 s = "aabbcc"
-ls=list(s)
-unique=[]
-for each in ls:
-    if each not in unique:
-        unique.append(each)
-
-print(f"all character is unique {''.join(map(str, unique))}")
+freq = {}
+for char in s:
+    freq[char] = freq.get(char, 0) + 1
+print(freq)
+used = set()
+deletions = 0
+for count in freq.values():
+    while count > 0 and count in used:
+        count -= 1
+        deletions += 1
+    if count > 0:
+        used.add(count)
+print(deletions)
