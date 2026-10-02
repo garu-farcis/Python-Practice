@@ -41,3 +41,15 @@ print(deletions)
 # Sample Output: [4, 9, 9, 49, 121]
 
 nums = [-7, -3, 2, 3, 11]
+# sor_num=sorted(nums,reverse=True)
+# print(sor_num)
+# This is non-decreasing because each number is either:
+#
+# greater than the previous number, or
+# equal to the previous number.
+
+sor_num=[]
+for i in range(len(nums)-1):
+    if nums[i+1]>=nums[i]:
+        sor_num.append(nums[i]*nums[i])
+print(sor_num)
