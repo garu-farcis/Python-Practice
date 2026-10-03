@@ -69,6 +69,10 @@ print(avg_rev_within,avg_rev_after)
 # 5. Using groupby + transform, create a column that shows each order’s revenue as a percentage of the customer’s total lifetime revenue.
 # Then filter to show only orders that represent more than 30% of that customer’s total revenue.
 
+new_df['total_lifetime_rev']=new_df.groupby('customer_id').agg(
+total_lifetime_rev=('revenue',sum)
+).transform(max)
+print(new_df)
 
 
 # 6. Reshape the data to show, for each region, the total quantity sold of every product.
