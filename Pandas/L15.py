@@ -75,11 +75,15 @@ print(new_df)
 filtre=new_df['rev_perc']>30
 print(new_df[filtre])
 
-
-
 # 6. Reshape the data to show, for each region, the total quantity sold of every product.
 # Fill missing product-region combinations with 0 and sort the columns alphabetically.
-#
+
+new_df=new_df.groupby(['region','product']).agg(
+    total_quantity=('quantity','sum')
+)
+new_df = new_df['total_quantity'].unstack(fill_value=0)
+new_df = new_df.sort_index(axis=1)
+print(new_df)
 # 7. Calculate a cumulative revenue column for each customer ordered by order_date.
 # Then find the order number (1st, 2nd, 3rd…) on which each customer first crossed $1000 in cumulative revenue.
 #
