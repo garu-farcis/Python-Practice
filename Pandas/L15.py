@@ -69,9 +69,10 @@ print(avg_rev_within,avg_rev_after)
 # 5. Using groupby + transform, create a column that shows each order’s revenue as a percentage of the customer’s total lifetime revenue.
 # Then filter to show only orders that represent more than 30% of that customer’s total revenue.
 
-new_df['total_lifetime_rev']=new_df.groupby('customer_id')['revenue'].transform('max')
-new_df['rev_perc']=(new_df['total_lifetime_rev']/new_df['total_lifetime_rev'].sum())*100
+total_lifetime_rev=new_df.groupby('order_id')['revenue'].transform('sum')
+new_df['rev_perc']=(total_lifetime_rev/total_lifetime_rev.sum())*100
 print(new_df)
+filtre=new_df['rev_perc']>30
 
 
 
