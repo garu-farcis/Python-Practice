@@ -8,4 +8,5 @@ file="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sensor_s
 a=np.load(file)
 normalizeed=(a - a.min()) / (a.max() - a.min())
 print(a)
-distance = np.linalg.norm(a_norm - b_norm)
+diff = normalizeed[:, np.newaxis, :] - normalizeed[np.newaxis, :, :]
+distance = np.linalg.norm(diff,axis=2)
