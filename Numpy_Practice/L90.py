@@ -15,7 +15,7 @@ i, j = np.unravel_index(
     distance.shape
 )
 print("Distance matrix:")
-print(distance_matrix)
+print(distance)
 
 print("Most similar channels:", i, j)
-print("Distance:", distance_matrix[i, j])
+print("Distance:", distance[i, j])
