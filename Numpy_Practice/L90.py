@@ -14,3 +14,8 @@ i, j = np.unravel_index(
     np.argmin(np.where(np.eye(8, dtype=bool), np.inf, distance)),
     distance.shape
 )
+print("Distance matrix:")
+print(distance_matrix)
+
+print("Most similar channels:", i, j)
+print("Distance:", distance_matrix[i, j])
