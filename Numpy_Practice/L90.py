@@ -10,3 +10,7 @@ normalizeed=(a - a.min()) / (a.max() - a.min())
 print(a)
 diff = normalizeed[:, np.newaxis, :] - normalizeed[np.newaxis, :, :]
 distance = np.linalg.norm(diff,axis=2)
+i, j = np.unravel_index(
+    np.argmin(np.where(np.eye(8, dtype=bool), np.inf, distance_matrix)),
+    distance_matrix.shape
+)
