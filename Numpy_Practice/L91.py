@@ -11,7 +11,10 @@ file="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/weather_
 data=np.load(file)
 window=5
 kernel=np.ones(window)/window
-mean=np.apply_along_axis(lambda x:np.convolve(x,kernel,mode='full'),axis=1,arr=data)
+mean=np.apply_along_axis(lambda x:np.convolve(x,kernel,mode='valid'),axis=1,arr=data)
 tot_kernel=np.sum(np.ones(window)/window)
-tot=np.apply_along_axis(lambda x:np.convolve(x,tot_kernel,mode='full'),axis=1,arr=data)
+tot=np.apply_along_axis(lambda x:np.convolve(x,tot_kernel,mode='valid'),axis=1,arr=data)
 max_kernel=np.max(np.ones(window)/window)
+max_=np.apply_along_axis(lambda x:np.convolve(x,max_kernel,mode='valid'),axis=1,arr=data)
+
+one_stack=np.hstack([mean,tot,max_])
