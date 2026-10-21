@@ -1,3 +1,19 @@
 """Write a function that takes a list of strings and groups the anagrams together.
 Sample Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
 Sample Output: [["eat","tea","ate"], ["tan","nat"], ["bat"]]"""
+
+from collections import defaultdict
+lst=["eat", "tea", "tan", "ate", "nat", "bat"]
+result=defaultdict(list)
+for each in lst:
+    key=''.join(sorted(each))
+    result[key].append(each)
+print(result.values())
+
+
+# 4. Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid (brackets are closed in the correct order).
+# Sample Input: "({[]})"
+# Sample Output: True
+# Sample Input: "([)]"
+# Sample Output: False
+
