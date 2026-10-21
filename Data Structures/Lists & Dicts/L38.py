@@ -17,21 +17,21 @@ print(result.values())
 # Sample Input: "([)]"
 # Sample Output: False
 
-my_str=['(', ')', '{', '}', '[',']']
-sam_input='({[]})'
-sam_input1='([)]'
-in1=list(sam_input)
-print(in1)
-in2=list(sam_input1)
-print(in2)
-right1=-1
-for left in range(len(in1)):
-    for i in range(len(my_str)):
-        if
-        if in1[left]!=in1[right1]:
-            print("False")
-        else:
-            right1=right1-1
+# my_str=['(', ')', '{', '}', '[',']']
+# sam_input='({[]})'
+# sam_input1='([)]'
+# in1=list(sam_input)
+# print(in1)
+# in2=list(sam_input1)
+# print(in2)
+# right1=-1
+# for left in range(len(in1)):
+#     for i in range(len(my_str)):
+#         if
+#         if in1[left]!=in1[right1]:
+#             print("False")
+#         else:
+#             right1=right1-1
 
 
 def is_valid(s):
