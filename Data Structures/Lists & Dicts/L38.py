@@ -26,13 +26,13 @@ in2=list(sam_input1)
 print(in2)
 right1=-1
 for left in range(len(in1)):
-    if in1[left]!=in1[::right1]:
-        print("False")
-        pass
-    else:
-        left=left+1
-        right1=right1-1
-print("True")
+    for i in range(len(my_str)):
+        if
+        if in1[left]!=in1[right1]:
+            print("False")
+        else:
+            right1=right1-1
+
 
 
 
