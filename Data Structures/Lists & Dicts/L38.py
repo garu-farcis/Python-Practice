@@ -24,11 +24,14 @@ in1=list(sam_input)
 print(in1)
 in2=list(sam_input1)
 print(in2)
-right1=in1[::-1]
+right1=-1
 for left in range(len(my_str)):
     if my_str[left]!=right1:
         print("False")
         pass
+    else:
+        left=left+1
+
 
 
 
