@@ -34,6 +34,24 @@ for left in range(len(in1)):
             right1=right1-1
 
 
+def is_valid(s):
+    stack = []
+    pairs = {')': '(', '}': '{', ']': '['}
+
+    for char in s:
+        if char in '({[':
+            stack.append(char)
+        else:
+            if not stack or stack.pop() != pairs[char]:
+                return False
+
+    return len(stack) == 0
+
+
+print(is_valid('({[]})'))  # True
+print(is_valid('([)]'))    # False
+
+
 
 
 
