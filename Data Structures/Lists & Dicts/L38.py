@@ -24,6 +24,7 @@ in1=list(sam_input)
 print(in1)
 in2=list(sam_input1)
 print(in2)
-for i in in1:
-    for j in in2:
+right1=in1[::-1]
+for i in range(len(my_str)):
+
 
