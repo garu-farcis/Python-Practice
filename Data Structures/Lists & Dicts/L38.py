@@ -17,3 +17,13 @@ print(result.values())
 # Sample Input: "([)]"
 # Sample Output: False
 
+my_str=['(', ')', '{', '}', '[',']']
+sam_input='({[]})'
+sam_input1='([)]'
+in1=list(sam_input)
+print(in1)
+in2=list(sam_input1)
+print(in2)
+for i in in1:
+    for j in in2:
+
