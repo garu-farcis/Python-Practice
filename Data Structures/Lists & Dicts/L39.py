@@ -6,12 +6,15 @@ Preserve top-level keys and prefix nested keys with the parent key + _."""
 def flatten_events(events: list[dict]) -> list[dict]:
     my_event=[]
     for each in events:
+        flat={}
         if isinstance(each,dict):
-            for e in each.values():
-                if isinstance(e,dict):
-                    my_event.extend(flatten_events(e))
+            for key,val in each.items():
+                if isinstance(val,dict):
+                    for k,v in val.items():
+                        flat[key+'_'+k]=v
                 else:
-                    my_event.append(e)
+                    flat[key]=val
+            my_event.append(flat)
 
 events = [
         {"id": 1, "user": {"name": "Alice", "age": 30}, "ts": 1690000000},
