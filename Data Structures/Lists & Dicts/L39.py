@@ -16,7 +16,11 @@ def flatten_events(events: list[dict]) -> list[dict]:
                     flat[key]=val
             my_event.append(flat)
 
+    return my_event
+
 events = [
         {"id": 1, "user": {"name": "Alice", "age": 30}, "ts": 1690000000},
         {"id": 2, "user": {"name": "Bob", "age": 25}, "ts": 1690000100}
     ]
+d=flatten_events(events)
+print(d)
