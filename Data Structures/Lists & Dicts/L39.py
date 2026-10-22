@@ -7,9 +7,11 @@ def flatten_events(events: list[dict]) -> list[dict]:
     my_event=[]
     for each in events:
         if isinstance(each,dict):
-            my_event.extend(list(flatten_events(each)))
-        else:
-            my_event.append(list(each))
+            for e in each.values():
+                if isinstance(e,dict):
+                    my_event.extend(flatten_events(e))
+                else:
+                    my_event.append(e)
 
 events = [
         {"id": 1, "user": {"name": "Alice", "age": 30}, "ts": 1690000000},
