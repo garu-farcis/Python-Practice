@@ -11,3 +11,5 @@ df['amount']=df['amount'].fillna(value=0)
 if (df['amount']>100):
     df['status']='high'
 else:
+    df['status'] = 'normal'
+print(df)
