@@ -6,10 +6,10 @@ import pandas as pd
 df=pd.read_csv("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sales_data.csv")
 df['amount']=df['quantity']*df['unit_price']
 # print(df)
-df['amount']=df['amount'].astype(type=float)
+df['amount']=df['amount'].astype(dtype=float)
 df['amount']=df['amount'].fillna(value=0)
-if (df['amount']>100):
+if (df['amount']>100).any():
     df['status']='high'
-else:
+elif (df['amount']<100).any():
     df['status'] = 'normal'
 print(df)
