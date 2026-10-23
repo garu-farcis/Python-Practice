@@ -12,11 +12,13 @@ events = [
 window_seconds = 10
 my_events=[]
 print(events)
-dup=defaultdict(list)
-uni=defaultdict(list)
-for each in range(len(events)):
-    if (events[each]['user_id']==events[(each+1)]['user_id']) and (events[each]['ts']-events[(each+1)]['ts'])==window_seconds:
+dup=[]
+uni=[]
+for each in range(0,len(events)+1):
+    if (events[each]['user_id']==events[each+1]['user_id']) and (events[(each+1)]['ts']-events[each]['ts'])<=window_seconds and events[each]['event_type']==events[each+1]['event_type']:
+        dup.append(events[each])
+    else:
+        uni.append(events[each])
 
 
-my_events.append(dup)
-print(uni)
+
