@@ -7,3 +7,5 @@ df=pd.read_csv("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/dat
 df['amount']=df['quantity']*df['unit_price']
 # print(df)
 df['amount']=df['amount'].astype(type=float)
+df['amount']=df['amount'].fillna(value=0)
+df['status']
