@@ -5,4 +5,5 @@
 import pandas as pd
 df=pd.read_csv("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sales_data.csv")
 df['amount']=df['quantity']*df['unit_price']
-print(df)
+# print(df)
+df['amount']=df['amount'].astype(type=float)
