@@ -3,13 +3,13 @@
 
 
 import pandas as pd
+import numpy as np
 df=pd.read_csv("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sales_data.csv")
 df['amount']=df['quantity']*df['unit_price']
 # print(df)
 df['amount']=df['amount'].astype(dtype=float)
 df['amount']=df['amount'].fillna(value=0)
-if (df['amount']>100).any():
-    df['status']='high'
-elif (df['amount']<100).any():
-    df['status'] = 'normal'
-print(df)
+df['status']=np.where(df['amount']>100,'high','low')
+mask =(df['amount'].isnull())
+if mask.sum()==0:
+    print(df)
