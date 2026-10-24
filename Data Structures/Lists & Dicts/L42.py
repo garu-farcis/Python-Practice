@@ -7,4 +7,6 @@ part3 = [(3, "c"), (6, "f")]
 Sample Output (as list for illustration):
 Python[(1, "a"), (2, "b"), (3, "c"), (4, "d"), (5, "e"), (6, "f"), (7, "g")]
 """
-
+part1 = [(1, "a"), (4, "d"), (7, "g")]
+part2 = [(2, "b"), (5, "e")]
+part3 = [(3, "c"), (6, "f")]
