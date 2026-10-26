@@ -11,12 +11,13 @@ Python[(1, "a"), (2, "b"), (3, "c"), (4, "d"), (5, "e"), (6, "f"), (7, "g")]
 from collections import defaultdict
 def partition_prob(list1,list2,list3)->list:
     my_list=[]
-    for i in list1:
-        my_list.append(i)
-    for i in list2:
-        my_list.append(i)
-    for i in list3:
-        my_list.append(i)
+    # for i in list1:
+    #     my_list.append(i)
+    # for i in list2:
+    #     my_list.append(i)
+    # for i in list3:
+    #     my_list.append(i)
+    my_list = list1 + list2 + list3
     my_dict=defaultdict(list)
     for k,v in my_list:
         my_dict[k].append(v)
