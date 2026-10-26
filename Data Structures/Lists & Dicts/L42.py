@@ -7,6 +7,27 @@ part3 = [(3, "c"), (6, "f")]
 Sample Output (as list for illustration):
 Python[(1, "a"), (2, "b"), (3, "c"), (4, "d"), (5, "e"), (6, "f"), (7, "g")]
 """
+
+from collections import defaultdict
+def partition_prob(list1,list2,list3)->list:
+    my_list=[]
+    for i in list1:
+        my_list.append(i)
+    for i in list2:
+        my_list.append(i)
+    for i in list3:
+        my_list.append(i)
+    my_dict=defaultdict(list)
+    for k,v in my_list:
+        my_dict[k].append(v)
+    for key in sorted(my_dict.keys()):
+        for v in my_dict[key]:
+            yield (k,v)
+
+
+
 part1 = [(1, "a"), (4, "d"), (7, "g")]
 part2 = [(2, "b"), (5, "e")]
 part3 = [(3, "c"), (6, "f")]
+val=partition_prob(part1,part2,part3)
+print(val)
