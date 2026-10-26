@@ -14,10 +14,15 @@ Python
 import os
 import pandas as pd
 def read_chunks(filepath,chunksize):
-    fd = os.open(filepath, os.O_RDONLY)
-    readBytes=os.read(fd,chunksize)
-    df=pd.DataFrame(readBytes)
-    total=df['value'].sum()
+    # fd = os.open(filepath, os.O_RDONLY)
+    # readBytes=os.read(fd,chunksize)
+    # df=pd.DataFrame(readBytes)
+    total = 0
+
+    for chunk in pd.read_csv(filepath, chunksize=chunksize):
+        total += chunk['value'].sum()
+
+    # total=df['value'].sum()
     return total
 filep="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/students.csv"
 chunks=2
