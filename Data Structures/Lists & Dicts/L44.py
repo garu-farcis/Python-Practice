@@ -10,6 +10,10 @@ mean_rain=np.mean(rainfall)
 std_rain=np.std(rainfall)
 median_rain=np.median(rainfall)
 mask=2.5*std_rain>mean_rain
-new_rainfall=np.where(rainfall[mask],median_rain,rainfall)
+new_rainfall=np.where(rainfall[mask],median_rain,data[:,4])
 print(new_rainfall)
+humidity=data[:,1]
+corelation=np.corrcoef(new_rainfall,humidity)
+no_outliers=len(rainfall[mask])
+
 
