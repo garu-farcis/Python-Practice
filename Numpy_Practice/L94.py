@@ -10,9 +10,13 @@ file_path="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/iri
 df=pd.read_csv(file_path)
 unique_keys=df['species'].unique()
 print(unique_keys)
-data=np.array(df)
-print(data)
-species=data[:,4]
-my_dict={keys:values for keys,values in zip(data[:,4],data[:,(0,1,2,3)])}
-print(my_dict)
-covar_matrix=np.cov(my_dict.keys(),my_dict.values())
+features=df.select_dtypes(include=np.number).columns
+my_dict={species:df.loc[df['species']== species, features] for species in unique_keys}
+
+
+# data=np.array(df)
+# print(data)
+# species=data[:,4]
+# my_dict={keys:values for keys,values in zip(unique_keys,features)}
+# print(my_dict)
+# covar_matrix=np.cov(my_dict.keys(),my_dict.values())
