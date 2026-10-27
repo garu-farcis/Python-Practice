@@ -9,5 +9,8 @@ import pandas as pd
 file_path="/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/iris.csv"
 df=pd.read_csv(file_path)
 data=np.array(df)
-numeric_cols=data[:,(0,1,2,3)]
+numeric_cols=data[:,(0,1,2,3)].astype(dtype=float)
 print(numeric_cols)
+col_wise_mean=np.mean(numeric_cols,axis=0)
+col_wise_std=np.std(numeric_cols,axis=0)
+standardized =(numeric_cols-col_wise_mean)/col_wise_std
