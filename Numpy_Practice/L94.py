@@ -12,7 +12,9 @@ unique_keys=df['species'].unique()
 print(unique_keys)
 features=df.select_dtypes(include=np.number).columns
 my_dict={species:df.loc[df['species']== species, features] for species in unique_keys}
-
+for k,v in my_dict.items():
+    co_matrix=np.cov(v,rowvar=False)
+print(co_matrix)
 
 # data=np.array(df)
 # print(data)
