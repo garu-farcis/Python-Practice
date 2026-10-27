@@ -12,3 +12,7 @@ unique_keys=df['species'].unique()
 print(unique_keys)
 data=np.array(df)
 print(data)
+species=data[:,4]
+my_dict={keys:values for keys,values in zip(data[:,4],data[:,(0,1,2,3)])}
+print(my_dict)
+covar_matrix=np.cov(my_dict.keys(),my_dict.values())
