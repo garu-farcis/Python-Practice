@@ -14,3 +14,4 @@ print(numeric_cols)
 col_wise_mean=np.mean(numeric_cols,axis=0)
 col_wise_std=np.std(numeric_cols,axis=0)
 standardized =(numeric_cols-col_wise_mean)/col_wise_std
+print(standardized)
