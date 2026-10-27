@@ -11,7 +11,13 @@ Pclass=data[:,2]
 surv=data[:,1]
 mask=(surv==1)&(Pclass<=2)
 new_data=data[mask]
-median_group=np.median(new_data[:,5])
-print(new_data)
-ages=new_data[:,5]
-print(ages)
+median_age=np.nanmedian(new_data[:,5]).astype(float)
+print(median_age)
+# print(new_data)
+mask=np.isnan(new_data[:,5].astype(float))
+new_data[:,5]=np.where(mask,median_age,new_data[:,5])
+print(new_data[:,5])
+mean=np.mean(new_data[:,5])
+std=np.std(new_data[:,5])
+
+
