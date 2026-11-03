@@ -4,9 +4,7 @@ Topics: Broadcasting · Aggregation · Ufuncs · Slicing · Indexing
 Dataset: sensor_log.npy  (shape 1200 × 8)
 
 
-2. Extract columns 0 (temp), 1 (humidity) and 4 (voltage) using advanced indexing.
-   Create a new 2D array from these three columns. Then use a ufunc to compute
-   the element-wise maximum between temperature and voltage (broadcast humidity if needed).
+
 
 3. Using slicing, create a view of every 5th row starting from index 10 up to index 600.
    On this sliced view, compute the row-wise sum and the column-wise mean using aggregation.
