@@ -9,5 +9,5 @@ humidity=data[:,1]
 voltage=data[:,4]
 new_data=np.concatenate([[temp,humidity,voltage]],axis=0)
 print(new_data)
-ele_wise_max=np.max(new_data)
+ele_wise_max=np.maximum(new_data[:,0], new_data[:,2])
 print(ele_wise_max)
