@@ -6,8 +6,7 @@ Dataset: sensor_log.npy  (shape 1200 × 8)
 
 
 
-3. Using slicing, create a view of every 5th row starting from index 10 up to index 600.
-   On this sliced view, compute the row-wise sum and the column-wise mean using aggregation.
+
 
 4. Create a boolean mask for rows where temperature > 25 AND humidity < 50.
    Use this mask (boolean indexing) to extract those rows. Then apply the ufunc np.sqrt
