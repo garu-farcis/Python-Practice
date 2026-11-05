@@ -3,5 +3,7 @@
 
 import numpy as np
 data=np.load("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sensor_log.npy")
-my_view=data[5,::5]
+my_view=data[10:600,::5]
 print(my_view)
+row_wise_sum=np.sum(my_view,axis=1)
+col_wise_sum=np.sum(my_view,axis=0)
