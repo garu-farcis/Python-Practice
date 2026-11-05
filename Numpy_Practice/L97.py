@@ -8,9 +8,7 @@ Dataset: sensor_log.npy  (shape 1200 × 8)
 
 
 
-4. Create a boolean mask for rows where temperature > 25 AND humidity < 50.
-   Use this mask (boolean indexing) to extract those rows. Then apply the ufunc np.sqrt
-   to the vibration column of the filtered data.
+
 
 5. Using broadcasting, divide every column by its own maximum value (scale each column
    to the range [0, 1]). After scaling, compute the sum of each row with aggregation.
