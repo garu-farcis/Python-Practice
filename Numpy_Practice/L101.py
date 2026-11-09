@@ -4,8 +4,8 @@
 
 import numpy as np
 data=np.load("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/sensor_log.npy")
-temp=data[:,1]
-humi=data[:,2]
+temp=data[:,0]
+humi=data[:,1]
 mask=(temp>25) and (humi<50)
 extract=data[mask]
 res=np.sqrt(extract[:,7])
