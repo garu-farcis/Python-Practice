@@ -18,4 +18,5 @@ data=np.load("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/
 # curr=data[:,5]
 # curr_max=max(data[:,5])
 
-x_normed = data / max(data,axis=0)
+x_normed = data / np.max(data,axis=0)
+print(x_normed)
