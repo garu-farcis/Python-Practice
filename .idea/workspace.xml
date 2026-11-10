@@ -118,7 +118,7 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.L101">
+  <component name="RunManager" selected="Python.L102">
     <configuration name="L100" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
@@ -163,7 +163,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="L96" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="L102" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,7 +176,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L96.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L102.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.L102" />
         <item itemvalue="Python.L101" />
         <item itemvalue="Python.L100" />
         <item itemvalue="Python.L99" />
         <item itemvalue="Python.L98" />
-        <item itemvalue="Python.L96" />
       </list>
     </recent_temporary>
   </component>
