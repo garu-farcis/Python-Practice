@@ -20,3 +20,5 @@ data=np.load("/Users/prse/PycharmProjects/Python-Refresher/Python-Practice/data/
 
 x_normed = data / np.max(data,axis=0)
 print(x_normed)
+x_norm_sum=np.sum(x_normed,axis=1)
+print(f"the sum is {x_norm_sum}")
