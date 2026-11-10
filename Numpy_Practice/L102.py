@@ -22,3 +22,13 @@ x_normed = data / np.max(data,axis=0)
 print(x_normed)
 x_norm_sum=np.sum(x_normed,axis=1)
 print(f"the sum is {x_norm_sum}")
+
+#
+# 6. Extract the last 200 rows using slicing. On this sub-array, use fancy indexing to
+#    reorder the columns as [7, 0, 3, 5] (noise, temp, wind, current).
+#    Then compute the mean of the resulting array along axis=0.
+
+extract_rows=data[-200:,:]
+print(extract_rows)
+new_array=extract_rows[:,[7,0,3,5]]
+new_arr_mean=np.mean(new_array,axis=0)
