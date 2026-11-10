@@ -10,8 +10,6 @@ Dataset: sensor_log.npy  (shape 1200 × 8)
 
 
 
-5. Using broadcasting, divide every column by its own maximum value (scale each column
-   to the range [0, 1]). After scaling, compute the sum of each row with aggregation.
 
 6. Extract the last 200 rows using slicing. On this sub-array, use fancy indexing to
    reorder the columns as [7, 0, 3, 5] (noise, temp, wind, current).
