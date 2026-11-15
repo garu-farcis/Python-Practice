@@ -32,3 +32,10 @@ extract_rows=data[-200:,:]
 print(extract_rows)
 new_array=extract_rows[:,[7,0,3,5]]
 new_arr_mean=np.mean(new_array,axis=0)
+
+
+#
+# 7. Create a 1D array of shape (8,) containing the values [1.0, 0.5, 0.1, 2.0, 1.5, 0.8, 3.0, 0.2].
+#    Using broadcasting, multiply the entire sensor_log array by this weight vector.
+#    Afterwards, find the index of the row that has the maximum weighted sum (aggregation + indexing).
+
