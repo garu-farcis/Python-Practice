@@ -72,3 +72,22 @@ def my_recur(lst):
 my_lst = [1, [2, [3, 4], 5], 6]
 recur=my_recur(my_lst)
 print(sum(recur))
+
+
+# 2. Write a function that flattens a nested dictionary into a single-level dictionary using dot notation for keys.
+# Sample Input: {"a": 1, "b": {"c": 2, "d": {"e": 3}}}
+# Sample Output: {"a": 1, "b.c": 2, "b.d.e": 3}
+
+from collections import defaultdict
+def dict_recur(dct):
+    my_dict=defaultdict(list)
+    for key,val in dct.items():
+        if isinstance(val,dict):
+            my_dict[key].extend(dict_recur(val))
+        else:
+            my_dict[key].append(val)
+    return my_dict
+
+my_dct={"a": 1, "b": {"c": 2, "d": {"e": 3}}}
+res=dict_recur(my_dct)
+print(res)
