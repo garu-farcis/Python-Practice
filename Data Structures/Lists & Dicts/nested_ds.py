@@ -79,15 +79,17 @@ print(sum(recur))
 # Sample Output: {"a": 1, "b.c": 2, "b.d.e": 3}
 
 from collections import defaultdict
-def dict_recur(dct):
-    my_dict=defaultdict(list)
+def single_level(dct,p_key=""):
+
+    my_dict={}
     for key,val in dct.items():
+        new_key=f"{p_key}.{key}" if p_key else key
         if isinstance(val,dict):
-            my_dict[key].extend(dict_recur(val))
+            my_dict.update(single_level(val,new_key))
         else:
-            my_dict[key].append(val)
+            my_dict[new_key]=val
     return my_dict
 
 my_dct={"a": 1, "b": {"c": 2, "d": {"e": 3}}}
-res=dict_recur(my_dct)
+res=single_level(my_dct)
 print(res)
