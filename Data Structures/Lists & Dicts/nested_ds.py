@@ -134,3 +134,12 @@ print(result)
 
 
 
+# 4. Write a function that deeply merges two nested dictionaries. If a key exists in both and both values are dictionaries, merge them recursively. Otherwise, the second dictionary’s value overwrites the first.
+# Sample Input:
+
+def deep_merge(l1,l2):
+
+
+d1 = {"a": 1, "b": {"c": 3, "d": 4}}
+d2 = {"b": {"c": 5, "e": 6}, "f": 7}
+# Sample Output: {"a": 1, "b": {"c": 5, "d": 4, "e": 6}, "f": 7}
