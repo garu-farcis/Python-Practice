@@ -137,21 +137,19 @@ print(result)
 # 4. Write a function that deeply merges two nested dictionaries. If a key exists in both and both values are dictionaries, merge them recursively. Otherwise, the second dictionary’s value overwrites the first.
 # Sample Input:
 
-def deep_merge(l1,l2,pk=''):
+def deep_merge(l1,l2):
     merge_dict={}
     for key,value in l1.items():
-        new_k=f"{pk}.{key}" if pk else key
-        if isinstance(value,dict):
-            merge_dict.update(value)
+        if isinstance(merge_dict[key], dict) and isinstance(value, dict):
+            merge_dict.update(deep_merge(merge_dict[key],value))
         else:
-            merge_dict[new_k]=value
+            merge_dict[key]=value
     print(merge_dict)
     for key, value in l2.items():
-        new_k = f"{pk}.{key}" if pk else key
-        if isinstance(value, dict):
-            merge_dict.update(value)
+        if isinstance(merge_dict[key], dict) and isinstance(value, dict):
+            merge_dict.update(deep_merge(merge_dict[key],value))
         else:
-            merge_dict[new_k] = value
+            merge_dict[key] = value
     return merge_dict
 
 d1 = {"a": 1, "b": {"c": 3, "d": 4}}
