@@ -105,16 +105,21 @@ print(res)
 # department = "Engineering"
 # Sample Output: [{"name": "Alice", "info": {"dept": "Engineering", "level": 3}}, {"name": "Charlie", "info": {"dept": "Engineering", "level": 4}}]
 
-
+from collections import defaultdict
 def nested_dicts(lst,dept):
-    my_list = []
-    my_dict={}
+    # my_list = []
+    my_dict=defaultdict(list)
+    xtra=[]
     for each in lst:
         if isinstance(each,dict):
             for key,val in each.items():
                 if isinstance(val,dict):
                     for k,v in val.items():
-
+                        if v==dept:
+                            my_dict[key].append(val)
+        else:
+            xtra.append(each)
+    return my_dict
 
 
 
