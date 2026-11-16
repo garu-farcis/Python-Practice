@@ -93,3 +93,40 @@ def single_level(dct,p_key=""):
 my_dct={"a": 1, "b": {"c": 2, "d": {"e": 3}}}
 res=single_level(my_dct)
 print(res)
+
+
+# 3. Given a list of nested dictionaries representing employees, return a new list containing only employees who work in a specific department.
+# Sample Input:Sample Input:
+# employees = [
+#     {"name": "Alice", "info": {"dept": "Engineering", "level": 3}},
+#     {"name": "Bob", "info": {"dept": "HR", "level": 2}},
+#     {"name": "Charlie", "info": {"dept": "Engineering", "level": 4}}
+# ]
+# department = "Engineering"
+# Sample Output: [{"name": "Alice", "info": {"dept": "Engineering", "level": 3}}, {"name": "Charlie", "info": {"dept": "Engineering", "level": 4}}]
+
+
+def nested_dicts(lst,dept):
+    my_list = []
+    my_dict={}
+    for each in lst:
+        if isinstance(each,dict):
+            for key,val in each.items():
+                if isinstance(val,dict):
+                    for k,v in val.items():
+
+
+
+
+department = "Engineering"
+
+employees = [
+    {"name": "Alice", "info": {"dept": "Engineering", "level": 3}},
+    {"name": "Bob", "info": {"dept": "HR", "level": 2}},
+    {"name": "Charlie", "info": {"dept": "Engineering", "level": 4}}]
+
+result=nested_dicts(employees,department)
+print(result)
+
+
+
