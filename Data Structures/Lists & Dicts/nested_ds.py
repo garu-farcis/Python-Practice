@@ -107,19 +107,18 @@ print(res)
 
 from collections import defaultdict
 def nested_dicts(lst,dept):
-    # my_list = []
-    my_dict=defaultdict(list)
+    my_list = []
+    # my_dict=defaultdict(list)
     xtra=[]
     for each in lst:
         if isinstance(each,dict):
             for key,val in each.items():
                 if isinstance(val,dict):
-                    for k,v in val.items():
-                        if v==dept:
-                            my_dict[key].append(val)
+                   if val.get("dept")==dept:
+                        my_list.append(each)
         else:
             xtra.append(each)
-    return my_dict
+    return my_list
 
 
 
