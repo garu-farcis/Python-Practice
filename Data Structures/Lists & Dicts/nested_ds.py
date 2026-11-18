@@ -140,14 +140,12 @@ print(result)
 def deep_merge(l1,l2):
     merge_dict={}
     for key,value in l1.items():
-        if isinstance(merge_dict[key], dict) and isinstance(value, dict):
-            merge_dict.update(deep_merge(merge_dict[key],value))
-        else:
             merge_dict[key]=value
     print(merge_dict)
     for key, value in l2.items():
-        if isinstance(merge_dict[key], dict) and isinstance(value, dict):
-            merge_dict.update(deep_merge(merge_dict[key],value))
+        if key in merge_dict and isinstance(merge_dict[key], dict) and isinstance(value, dict):
+            merge_dict[key]=(deep_merge(merge_dict[key],value))
+            # merge_dict.update(deep_merge(merge_dict[key], value)) if i want all the values of c and d also
         else:
             merge_dict[key] = value
     return merge_dict
