@@ -176,26 +176,14 @@ print(res)
 # Sample Input:
 
 def check_path(dat,ks):
-    store_res={}
-    for key,val in dat.items():
-        store_res[key]=val
-    print(store_res)
-    for k,v in dat.items():
-        if k in store_res and store_res[key] in ks and isinstance(store_res[k],dict) and isinstance(val,dict):
-            store_res[k]=check_path(v,store_res[k])
-        else:
-            store_res[k]=v
-    results={}
-    for k,v in store_res.items():
-        if isinstance(v,dict):
-            for key,val in v.items():
-                results[key]=val
+    store_res=dat
+    for k in ks :
+        if isinstance(store_res,dict) and k in store_res:
+            store_res=store_res[k]
         else:
             return None
-    return results
 
-
-
+    return store_res
 
 data = {"user": {"profile": {"name": "Alice", "age": 30}}}
 keys = ["user", "profile", "name"]
