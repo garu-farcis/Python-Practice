@@ -155,3 +155,19 @@ d2 = {"b": {"c": 5, "e": 6}, "f": 7}
 res=deep_merge(d1,d2)
 print(res)
 # Sample Output: {"a": 1, "b": {"c": 5, "d": 4, "e": 6}, "f": 7}
+
+# 5. Given a nested list that represents a matrix, write a function that returns the transpose of the matrix.
+# Sample Input:
+import numpy as np
+def transpose(nested_list):
+    myarr=np.array(mylist)
+    x=myarr.transpose()
+    print(x)
+    result=list(x)
+    return result
+
+mylist=[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+res=transpose(mylist)
+print(res)
+
+# Sample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
