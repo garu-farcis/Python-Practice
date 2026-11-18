@@ -171,3 +171,27 @@ res=transpose(mylist)
 print(res)
 
 # Sample Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+# 6. Write a function that takes a nested dictionary and a list of keys, and returns the value at that nested path. Return None if the path does not exist.
+# Sample Input:
+
+def check_path(dat,ks):
+    store_res={}
+    for key,val in dat.items():
+        store_res[key]=val
+    print(store_res)
+    for k,v in dat.items():
+        if k in store_res and store_res[key] in ks and isinstance(store_res[k],dict) and isinstance(val,dict):
+            store_res[k]=check_path(v,store_res[k])
+        else:
+            store_res[k]=v
+    return store_res.values()
+
+
+
+data = {"user": {"profile": {"name": "Alice", "age": 30}}}
+keys = ["user", "profile", "name"]
+
+ress=check_path(data,keys)
+print(ress)
+# Sample Output: "Alice"
