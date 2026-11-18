@@ -185,7 +185,15 @@ def check_path(dat,ks):
             store_res[k]=check_path(v,store_res[k])
         else:
             store_res[k]=v
-    return store_res.values()
+    results={}
+    for k,v in store_res.items():
+        if isinstance(v,dict):
+            for key,val in v.items():
+                results[key]=val
+        else:
+            return None
+    return results
+
 
 
 
