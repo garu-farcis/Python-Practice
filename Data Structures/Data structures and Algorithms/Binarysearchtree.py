@@ -5,6 +5,9 @@ class Node:
         self.value=value
         self.left=None
         self.right=None
+
+#         inserting values in your bst
+
 def insert_node(root,value):
     if root is None:
         return Node(value)
@@ -21,6 +24,7 @@ for num in numbers:
     root = insert_node(root, num)
 print(root)
 
+# search a number
 def search_key(roots,key):
     if roots is None:
         return False
@@ -33,3 +37,16 @@ def search_key(roots,key):
 ke=70
 res=search_key(root,ke)
 print(res)
+
+# methods of traversal
+# Inorder (Left → Root → Right)
+def inorder(roots):
+    if roots:
+        inorder(roots.left)
+        print(roots.value)
+        inorder(roots.right)
+
+inroder=inorder(root)
+print(inroder)
+
+# Preorder (Root → Left → Right)
