@@ -50,3 +50,10 @@ inroder=inorder(root)
 print(inroder)
 
 # Preorder (Root → Left → Right)
+def preorder(roots):
+    if roots:
+        print(roots.value)
+        preorder(roots.left)
+        preorder(roots.right)
+preo=preorder(root)
+print(f"preorder bst is {preo}")
