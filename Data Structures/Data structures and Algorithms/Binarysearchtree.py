@@ -55,5 +55,18 @@ def preorder(roots):
         print(roots.value)
         preorder(roots.left)
         preorder(roots.right)
+
+
 preo=preorder(root)
 print(f"preorder bst is {preo}")
+
+# Postorder (Left → Right → Root)
+
+def postorder(roots):
+    if roots:
+        postorder(roots.left)
+        postorder(roots.right)
+        print(roots.value)
+
+postr=postorder(root)
+print(postr)
