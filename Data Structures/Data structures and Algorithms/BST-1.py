@@ -25,7 +25,13 @@ def insert_values(root,value):
 numbers = [50, 30, 70, 20, 40, 60, 80]
 root=None
 for n in numbers:
-    root= insert_values(root,numbers)
+    root= insert_values(root,n)
 
-print(root)
+def inorder(roots):
+    if roots:
+        inorder(roots.left)
+        print(roots.value)
+        inorder(roots.right)
 
+travered=inorder(root)
+print(travered)
