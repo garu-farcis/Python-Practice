@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79de86c3-1983-4722-821f-66887c141c8c" name="Changes" comment="Python Refresher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures/Lists &amp; Dicts/L45.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Lists &amp; Dicts/L45.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +93,7 @@
     "Python.L41.executor": "Run",
     "Python.L42.executor": "Run",
     "Python.L44.executor": "Run",
+    "Python.L45.executor": "Run",
     "Python.L48.executor": "Run",
     "Python.L61.executor": "Run",
     "Python.L62.executor": "Run",
@@ -121,7 +123,7 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.BST2">
+  <component name="RunManager" selected="Python.L45">
     <configuration name="BST-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
@@ -188,7 +190,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="L102" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="L45" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Refresher" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,11 +199,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numpy_Practice" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Structures/Lists &amp; Dicts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numpy_Practice/L102.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Structures/Lists &amp; Dicts/L45.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -234,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.L45" />
         <item itemvalue="Python.BST2" />
         <item itemvalue="Python.BST-1" />
         <item itemvalue="Python.Binarysearchtree" />
         <item itemvalue="Python.nested_ds" />
-        <item itemvalue="Python.L102" />
       </list>
     </recent_temporary>
   </component>
