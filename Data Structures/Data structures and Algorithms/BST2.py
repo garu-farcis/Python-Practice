@@ -31,25 +31,22 @@ numbers = [100, 50, 150, 25, 75, 125, 175, 10, 30]
 for i in numbers:
     root=insert_val(root,i)
 
-def sorting_bst(root):
-    if root:
-        sorting_bst(root.left)
-        print(root.value)
-        sorting_bst(root.right)
+def find_min(root):
+    if root is None:
+        return None
 
-print(root)
-def min_val(root):
-    if root:
-        min_val(root.left)
-    else:
-        return False
+    while root.left is not None:
+        root = root.left
 
-def max_val(root):
-    if root:
-        max_val(root.right)
-    else:
-        return False
+    return root.value
+def find_max(root):
+    if root is None:
+        return None
 
-min=min_val(root)
-max=max_val(root)
+    while root.right is not None:
+        root = root.right
+
+    return root.value
+min=find_min(root)
+max=find_max(root)
 print(max,min)
